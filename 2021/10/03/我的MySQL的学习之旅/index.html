@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hello World | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="我的MySQL的学习之旅数据库初识为什么学习数据库实现数据持久化使用完整的管理系统统一管理，易于查询 数据库的相关概念DB：数据库（database） DBMS：数据库管理系统（Database Management System） 常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等SQL：结构化查询语言（Structure Query Language） 启动和停止My">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2021/09/06/hello-world/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/10/03/%E6%88%91%E7%9A%84MySQL%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="我的MySQL的学习之旅数据库初识为什么学习数据库实现数据持久化使用完整的管理系统统一管理，易于查询 数据库的相关概念DB：数据库（database） DBMS：数据库管理系统（Database Management System） 常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等SQL：结构化查询语言（Structure Query Language） 启动和停止My">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-09-06T08:13:00.079Z">
-<meta property="article:modified_time" content="2021-09-08T07:05:58.243Z">
+<meta property="og:image" content="d:/blog/source/_posts/隔离级别.png">
+<meta property="article:published_time" content="2021-10-03T09:44:44.938Z">
+<meta property="article:modified_time" content="2021-10-03T09:47:35.901Z">
 <meta property="article:author" content="mymodel57">
-<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/blog/source/_posts/隔离级别.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -161,50 +162,1132 @@
           </div>
           <div id="js-content" class="content-ll">
             
-    <i class="fa fa-thumb-tack"></i>
-
-<article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-我的MySQL的学习之旅" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-
-
-<!-- span 给的 id 是文章的 url 作为唯一的 key 值 -->
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2021/09/06/hello-world/" class="pageViews">0</span>次
-  </a>
-
-
-        
-        <a href="/2021/09/06/hello-world/" class="archive-article-date">
-  	<time datetime="2021-09-06T08:13:00.079Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-06</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="我的MySQL的学习之旅"><a href="#我的MySQL的学习之旅" class="headerlink" title="我的MySQL的学习之旅"></a>我的MySQL的学习之旅</h2><h3 id="数据库初识"><a href="#数据库初识" class="headerlink" title="数据库初识"></a>数据库初识</h3><h4 id="为什么学习数据库"><a href="#为什么学习数据库" class="headerlink" title="为什么学习数据库"></a>为什么学习数据库</h4><p>实现数据持久化<br>使用完整的管理系统统一管理，易于查询</p>
+<h4 id="数据库的相关概念"><a href="#数据库的相关概念" class="headerlink" title="数据库的相关概念"></a>数据库的相关概念</h4><p>DB：数据库（database）</p>
+<p>DBMS：数据库管理系统（Database Management System）</p>
+<p>常见的数据库管理系统：MySQL、Oracle、DB2、SqlServer等<br>SQL：结构化查询语言（Structure Query Language）</p>
+<h4 id="启动和停止MySQL服务"><a href="#启动和停止MySQL服务" class="headerlink" title="启动和停止MySQL服务"></a>启动和停止MySQL服务</h4><ul>
+<li><p>方式一：右击此电脑—管理—服务—启动或停止MySQL服务</p>
+</li>
+<li><p>方式二：</p>
+<blockquote>
+<p>启动：net start mysql 服务名 </p>
+<p>停止：net stop mysql 服务名</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="MySQL服务端的登录和退出"><a href="#MySQL服务端的登录和退出" class="headerlink" title="MySQL服务端的登录和退出"></a>MySQL服务端的登录和退出</h4><blockquote>
+<p>登录 mysql –h 主机名 –u用户名 –p密码 </p>
+<p>​    例：mysql -h localhost -u root -proot </p>
+<p>退出 exit或ctrl+C</p>
+</blockquote>
+<h4 id="MySQL常见命令介绍"><a href="#MySQL常见命令介绍" class="headerlink" title="MySQL常见命令介绍"></a>MySQL常见命令介绍</h4><blockquote>
+<p>进入mysql, 在命令行中输入<br>mysql–uroot–p密码</p>
+<p>查看mysql中的数据库<br>show databases;</p>
+<p>新建一个数据库<br>create database 数据库名;<br>例：create database book;</p>
+<p>选择一个数据库<br>use 数据库名称;<br>例：use test;</p>
+<p>查询数据表<br>show tables;</p>
+<p>查看指定的数据库中的数据表<br>show tables from 数据库名;<br>例：show tables from test;</p>
+<p>查询当前所在数据库<br>select database();</p>
+</blockquote>
+<ul>
+<li>查看MySQL服务端版本</li>
+</ul>
+<blockquote>
+<p>登录到mysql服务端  </p>
+<p>select version(); </p>
+<p>没有登录到mysql服务端  在cmd命令界面输入：</p>
+<p>mysql <em>–version</em></p>
+</blockquote>
+<h4 id="MySQL的语法规范"><a href="#MySQL的语法规范" class="headerlink" title="MySQL的语法规范"></a>MySQL的语法规范</h4><ul>
+<li>不区分大小写,但建议关键字大写，表名、列名小写</li>
+<li>每句话用;或\g结尾，最好用分号结尾</li>
+<li>注释：①单行注释：#注释文字；②单行注释：– 注释文字；③多行注释：/* 注释文字 */</li>
+</ul>
+<h4 id="SQL语言的分类"><a href="#SQL语言的分类" class="headerlink" title="SQL语言的分类"></a>SQL语言的分类</h4><ul>
+<li>DQL（Data Query Language）：数据查询语言，用于检索数据库中的数据，主要是SELECT语句；</li>
+<li>DML（Data Manipulation Language)：数据操纵语言，用于改变数据库中的数据，主要INSERT、UPDATE和DELETE语句；</li>
+<li>DDL（Data Definition Language)：数据定义语言，用于库和表的创建、修改、删除，主要包括CREATE、DROP、ALTER语句；</li>
+<li>DCL（Data Control Language)：数据控制语言，用于定义用户的访问权限和安全级别，主要包括GRANT和REVOKE语句；</li>
+<li>TCL（Transaction Control Language)：事务控制语言，用于维护数据的一致性，包括COMMIT、ROLLBACK和SAVEPOINT语句。</li>
+</ul>
+<h3 id="DQL语言"><a href="#DQL语言" class="headerlink" title="DQL语言"></a>DQL语言</h3><h4 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h4><blockquote>
+<p>USE myemployees; </p>
+<p> #1.查询表中的单个字段</p>
+<p> SELECT last_name FROM employees;</p>
+<p> #2.查询表中的多个字段</p>
+<p> SELECT last_name,salary,email FROM employees;</p>
+<p> #3.查询所有字段<br> SELECT * FROM employees;</p>
+<p> #当字段与关键字重复时，可以加着重号`````</p>
+<p> #4.查询常量值<br> SELECT 100;<br> SELECT ‘john’;</p>
+<p> #5.查询表达式<br> SELECT 100%98;</p>
+<p> #6.查询函数<br> SELECT VERSION();</p>
+<p> #7.字段起别名,便于理解,可以区分查询字段重名的问题<br> #使用AS<br> SELECT 100%98 AS 结果;<br> SELECT last_name AS 姓, first_name AS 名 FROM employees;<br> #使用空格<br> SELECT last_name 姓, first_name 名 FROM employees;</p>
+<p> #案例：查询salary，显示结果为out put<br> SELECT salary AS “out put” FROM employees;</p>
+<p> #8.去重<br> #案例：查询共表中涉及到的所有部门编号<br> SELECT DISTINCT department_id FROM employees;</p>
+<p> #9.+ 号的作用,只能做运算符<br> SELECT 100+90;<br> SELECT ‘123’+90;<br> SELECT ‘john’+90;   #john转化为0<br> SELECT ‘null’+90;   #结果为null<br> #案例：查询员工名和姓连接为一个字段，并显示为姓名<br> SELECT CONCAT(‘a’,’b’,’c’) AS 结果;<br> SELECT CONCAT(last_name,first_name) AS 姓名 FROM employees;</p>
+<p> #案例：<br> #将null转为0<br> SELECT IFNULL(<code>commission_pct</code>,0) AS 奖金率,<code>commission_pct</code><br> FROM <code>employees</code>;</p>
+<p> SELECT CONCAT(<code>first_name</code>,’,’,<code>last_name</code>,’,’,<code>job_id</code>,’,’,IFNULL(<code>commission_pct</code>,0))<br> FROM employees;</p>
+</blockquote>
+<h4 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h4><blockquote>
+<p>/*<br>条件查询<br>    条件运算符：&gt; &lt; = != &lt;&gt; &gt;= &lt;= &lt;=&gt;<br>    逻辑运算符<br>        &amp;&amp; || ！<br>        and or not<br>    模糊查询<br>        like<br>        between and<br>        in<br>        is null<br>*/</p>
+<p>#一、按条件表达式筛选<br>#案例1.查询工资&gt;12000的员工信息<br>SELECT * FROM employees WHERE salary&gt;12000;<br>#案例2.查询部门编号不等于90号员工名和部门编号<br>SELECT last_name,department_id<br>FROM employees<br>WHERE department_id&lt;&gt;90</p>
+<p>#二、按逻辑表达式筛选<br>#案例1.工资在10000-20000之间的员工名、工资以及奖金<br>SELECT last_name,salary,commission_pct<br>FROM employees<br>WHERE salary&gt;=10000 AND salary&lt;=20000;<br>#案例2.查询部门编号不是90-110之间的，或者工资高于15000的员工信息<br>SELECT *<br>FROM employees<br>WHERE department_id&lt;90 OR department_id&gt;110 OR salary&gt;15000;</p>
+<p>#三、模糊查询<br>#1.like<br>/*<br>通配符：<br>    % 任意的一个字符，包含0个字符<br>    _ 任意单个字符<br>*/</p>
+<p>#案例1.查询员工名中包含字符a的员工信息</p>
+<p>FROM employees<br>WHERE last_name LIKE ‘%a%’;</p>
+<p>#案例2.查询员工名中第三个字符为n，第五个字符为l的员工名和工资<br>SELECT last_name,salary<br>FROM employees<br>WHERE last_name LIKE ‘__n_l%’;</p>
+<p>#案例3.查询员工名中第二个字符为_，的员工名</p>
+<p>SELECT last_name<br>FROM employees<br>WHERE last_name LIKE ‘_\_%’;    </p>
+<p>#2.between and<br>#案例1.查询员工编号在100到120之间的员工信息<br>SELECT *<br>FROM employees<br>WHERE employee_id &gt;= 100 AND employee_id &lt;= 120;<br>#————————————————-<br>SELECT *<br>FROM employees<br>WHERE employee_id BETWEEN 100 AND 120;</p>
+<p>#3.in<br>#案例1.查询员工的工种编号是IT_PROG  AD_VP  AD_PRES中的一个员工名和工种编号<br>SELECT last_name,job_id<br>FROM employees<br>WHERE job_id = ‘IT_PROG’ OR job_id = ‘AD_VP’ OR job_id = ‘AD_PRES’;<br>#—————————————————<br>SELECT last_name,job_id<br>FROM employees<br>WHERE job_id IN(‘IT_PROG’,’AD_VP’,’AD_PRES’);</p>
+<p>#4.is null<br>#案例1.查询没有奖金的员工名和奖金率<br>SELECT last_name,commission_pct<br>FROM employees<br>WHERE commission_pct IS NULL;</p>
+<p>#查询有奖金的员工名和奖金率<br>SELECT last_name,commission_pct<br>FROM employees<br>WHERE commission_pct IS NOT NULL;</p>
+<p>#5.安全等于&lt;=&gt;<br>#案例1.查询没有奖金的员工名和奖金率<br>SELECT last_name,commission_pct<br>FROM employees<br>WHERE commission_pct &lt;=&gt; NULL;</p>
+<p>#案例2.查询工资为12000的员工信息<br>SELECT last_name,salary<br>FROM employees<br>WHERE salary &lt;=&gt; 12000;</p>
+<p>#习题：查询员工号为176的员工的姓名、部门号和年薪<br>SELECT<br>    last_name,<br>    department_id,<br>    salary<em>12</em>(1+IFNULL(<code>commission_pct</code>,0)) AS 年薪<br>FROM<br>    employees<br>WHERE<br>    <code>employee_id</code>=176;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">is null  PK  &lt;=&gt;</th>
+<th align="center">普通类型数值</th>
+<th align="center">null值</th>
+<th align="center">可读性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">is null</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">&lt;=&gt;</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
+</tr>
+</tbody></table>
+<h4 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h4><ul>
+<li><p>语法：select 查询列表 from 表 【where 筛选条件】 order by</p>
+</li>
+<li><p>特点：</p>
+</li>
+</ul>
+<ol>
+<li>asc代表的是升序，desc代表降序，不写默认为升序</li>
+<li>order by子句中可以支持单个字段、多个字段、表达式、函数、别名</li>
+<li>order by子句一般是放在查询语句的最后面,limit子句除外</li>
+</ol>
+<blockquote>
+<p>#案例1.查询员工信息，要求工资从高到低<br>SELECT * FROM employees ORDER BY salary DESC;</p>
+<p>#查询员工信息，要求工资从低到高<br>SELECT * FROM employees ORDER BY salary ASC;<br>SELECT * FROM employees ORDER BY salary;</p>
+<p>#案例2.查询部门编号&gt;=90的员工信息，要求按入职时间先后进行排序<br>SELECT *<br>FROM employees<br>WHERE department_id&gt;=90<br>ORDER BY hiredate ASC;</p>
+<p>#案例3.按表达式排序，按年薪的高低显示员工的信息和年薪<br>SELECT * ,salary * 12 * (1+IFNULL(commission_pct,0)) 年薪<br>FROM employees<br>ORDER BY salary * 12 * (1+IFNULL(commission_pct,0)) DESC;<br>#—————————————————-<br>SELECT * ,salary * 12 * (1+IFNULL(commission_pct,0)) 年薪<br>FROM employees<br>ORDER BY 年薪 DESC;</p>
+<p>#案例4.按函数排序，按姓名的长度显示员工的姓名和工资<br>SELECT LENGTH(last_name) 字节长度,last_name,salary<br>FROM employees<br>ORDER BY LENGTH(last_name) DESC;</p>
+<p>#案例5.按多个字段排序，查询员工信息，要求按工资排序，再按员工编号排序<br>SELECT *<br>FROM employees<br>ORDER BY salary ASC,employee_id DESC;</p>
+<p>#测试<br>#选择工资不在8000-17000的员工姓名和工资，按工资降序<br>SELECT last_name,salary<br>FROM employees<br>WHERE salary NOT BETWEEN 8000 AND 17000<br>ORDER BY salary DESC;</p>
+<p>#查询邮箱中包含e的员工信息，并按邮箱的字节数降序，再按部门号升序<br>SELECT *,LENGTH(email)<br>FROM employees<br>WHERE email LIKE ‘%e%’<br>ORDER BY LENGTH(email) DESC,department_id ASC;</p>
+</blockquote>
+<h4 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h4><h5 id="单行函数"><a href="#单行函数" class="headerlink" title="单行函数"></a>单行函数</h5><ul>
+<li>字符函数</li>
+</ul>
+<blockquote>
+<p>#1.length<br> SELECT LENGTH(‘john’);<br> SELECT LENGTH(‘张三haha’)</p>
+<p> SHOW VARIABLES LIKE ‘%char%’;</p>
+<p> #2.concat拼接字符<br> SELECT CONCAT(last_name,’_’,first_name) 姓名 FROM employees;</p>
+<p> #3.upper lower<br> SELECT UPPER(‘john’);<br> SELECT LOWER(‘joHn’);</p>
+<p> #案例：将姓大写，名小写，然后拼接<br> SELECT CONCAT(UPPER(last_name),’-‘,LOWER(first_name)) 姓名 FROM employees;</p>
+<p> #4.substr/substring<br> #注意：索引从1开始<br> #截取从指定索引处后面的所有字符<br> SELECT SUBSTR(‘李莫愁爱上了陆展元’,7) out_put;</p>
+<p> #截取从指定索引处指定长度的字符<br> SELECT SUBSTR(‘李莫愁爱上了陆展元’,1,3) out_put;</p>
+<p> #案例：姓名中首字母大写，其他字符小写然后用_拼接<br> SELECT CONCAT(UPPER(SUBSTR(last_name,1,1)),’ _ ‘,LOWER(SUBSTR(last_name,2))) out_put<br> FROM employees;</p>
+<p> #5.instr<br> #返回子串第一次出现的索引，如果找不到返回0<br> SELECT INSTR(‘杨不悔爱上了殷六侠殷六侠’,’殷六侠’) AS out_put;</p>
+<p> #6.trim<br> #去除前后空格<br> SELECT TRIM(‘     张翠山         ‘) AS out_put;<br> #去除前后a<br> SELECT TRIM(‘a’ FROM ‘aaaaaaaaa张aaaaa翠山aaaaaaaa’) AS out_put;</p>
+<p> #7.lpad rpad<br> #用指定的字符实现左填充指定长度<br> SELECT LPAD(‘殷素素’,10,’ * ‘) AS out_put;<br> SELECT LPAD(‘殷素素’,2,’ * ‘) AS out_put;</p>
+<p>  #用指定的字符实现右填充指定长度<br> SELECT RPAD(‘殷素素’,10,’ *’) AS out_put;<br> SELECT RPAD(‘殷素素’,2,’ *’) AS out_put;</p>
+<p> #8.replace<br> SELECT REPLACE(‘张无忌爱上了周芷若周芷若’,’周芷若’,’赵敏’) AS out_put;</p>
+</blockquote>
+<ul>
+<li>数学函数</li>
+</ul>
+<blockquote>
+<p> #1.round 四舍五入<br> SELECT ROUND(1.45);<br> SELECT ROUND(1.456,2);</p>
+<p> #2.ceil 向上取整，返回&gt;=该参数的最小整数<br> SELECT CEIL(-1.02);</p>
+<p> #3.floor 向下取整,返回&lt;=该参数的最大整数<br> SELECT FLOOR(-9.99);</p>
+<p> #4.truncate 截断<br> SELECT TRUNCATE(1.69999,1);</p>
+<p> #5.mod 取余<br> #mod(a,b) :  a-a/b*b<br> SELECT MOD(10,3);<br> SELECT 10%3;</p>
+</blockquote>
+<ul>
+<li>日期函数</li>
+</ul>
+<blockquote>
+<p>#now 返回当前系统日期+时间<br> SELECT NOW();</p>
+<p> #curdate 返回当前系统日期，不包含时间<br> SELECT CURDATE();</p>
+<p> #curtime 返回当前时间，不包含日期<br> SELECT CURTIME();</p>
+<p> #可以获取指定的部分，年月日小时分钟秒<br> SELECT YEAR(NOW()) 年;<br> SELECT YEAR(‘1998-1-1’) 年;</p>
+<p> SELECT YEAR(hiredate) 年 FROM employees;</p>
+<p> SELECT MONTH(NOW()) 月;<br> SELECT MONTHNAME(NOW()) 月;</p>
+<p> #day<br> #hour<br> #minute<br> #second</p>
+<p> #STR_TO_DATE<br> SELECT STR_TO_DATE(‘1998-3-2’,’%Y-%c-%d’) AS out_put;</p>
+<p> #案例：查询入职日期1992-4-3的员工信息<br> SELECT * FROM employees WHERE hiredate = ‘1992-4-3’;</p>
+<p> SELECT * FROM employees WHERE hiredate = STR_TO_DATE(‘4-3 1992’,’%c-%d %Y’);</p>
+<p> #date_format<br> SELECT DATE_FORMAT(NOW(),’%Y年%m月%d日’) AS out_put;</p>
+<p> #案例：查询有奖金的员工名和入职日期(xx月/xx日 xx年)<br> SELECT last_name,DATE_FORMAT(hiredate,’%m月/%d日 %y年’) 入职日期<br> FROM employees<br> WHERE commission_pct IS NOT NULL;</p>
+</blockquote>
+<ul>
+<li>其他函数</li>
+</ul>
+<blockquote>
+<p>#version 当前数据库服务器的版本<br>SELECT VERSION();</p>
+<p>#database 当前打开的数据库<br>SELECT DATABASE();</p>
+<p>#user当前用户<br>SELECT USER();</p>
+<p>#password(‘字符’)：返回该字符的密码形式<br>SELECT PASSWORD(‘a’);</p>
+<p>#md5(‘字符’):返回该字符的md5加密形式<br>SELECT MD5(‘a’);</p>
+</blockquote>
+<ul>
+<li>流程控制函数</li>
+</ul>
+<blockquote>
+<p>#1.if   if else<br> SELECT IF(10&gt;5,’大’,’小’);</p>
+<p> SELECT last_name,commission_pct,IF(commission_pct IS NULL,’没奖金，呵呵’,’有奖金，嘻嘻’) 备注<br> FROM employees;</p>
+<p> #2.case函数的使用一：switch case的效果</p>
+<p> /*<br>案例：查询员工的工资<br>    部门号=30，显示的工资为1.1倍<br>    部门号=40，显示的工资为1.2倍<br>    部门号=50，现实的工资为1.3倍<br>    其他部门，显示的工资为原工资<br> */<br> SELECT salary 原始工资,department_id,</p>
+<p> CASE department_id<br> WHEN 30 THEN salary<em>1.1<br> WHEN 40 THEN salary</em>1.2<br> WHEN 50 THEN salary*1.3<br> ELSE salary<br> END AS 新工资<br> FROM employees;</p>
+<p> #3.case 函数的使用二：类似多重if<br> /*<br>案例：查询员工的新工资<br>    如果工资大于20000，显示A级别<br>    如果工资大于15000，显示B级别<br>    如果工资大于10000，显示C级别<br>    否则，显示0级别<br> */<br> SELECT salary,<br> CASE<br> WHEN salary&gt;20000 THEN ‘A’<br> WHEN salary&gt;15000 THEN ‘B’<br> WHEN salary&gt;10000 THEN ‘C’<br> ELSE ‘D’<br> END AS 工资级别<br> FROM employees;</p>
+<p> #作业题<br> #查询员工名，姓名，工资，以及工资提高百分之20后的结果<br> SELECT employee_id,last_name,salary,salary*1.2 “new salary”<br> FROM employees;</p>
+<p> #将员工的姓名按首字母排序，写出姓名的长度<br> SELECT LENGTH(last_name) 长度,SUBSTR(last_name,1,1) 首字符,last_name<br> FROM employees<br> ORDER BY 首字符;</p>
+<p> #做一个查询<br> SELECT CONCAT(last_name,’ earns ‘,salary,’ monthly but wants ‘,salary*3) AS ‘ Dream Salary’<br> FROM employees;</p>
+</blockquote>
+<h5 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a>分组函数</h5><ul>
+<li><p>用途</p>
+<pre><code>用做统计使用，又称为聚合函数、统计函数、组函数
+</code></pre>
+</li>
+<li><p>分类</p>
+<p>​    sum 求和、avg 平均值、max 最大值、min最小值count 计算个数</p>
+</li>
+<li><p>特点</p>
+<pre><code>1.sum，avg一般用于处理数值型
+  max，min，count可以处理任何类型
+2.以上分组函数都忽略null值
+3.和distinct搭配实现去重的运算
+4.count，一般用count(*)计行数 
+5.和分组函数一同查询的字段要求是group by后的字段
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>#1.简单使用<br>SELECT SUM(salary) FROM employees;<br>SELECT AVG(salary) FROM employees;<br>SELECT MAX(salary) FROM employees;<br>SELECT MIN(salary) FROM employees;<br>SELECT COUNT(salary) FROM employees;</p>
+<p>SELECT SUM(salary) 和,ROUND(AVG(salary),2) 平均,MAX(salary) 最高,MIN(salary) 最低,COUNT(salary) 个数<br>FROM employees;</p>
+<p>#2.参数支持哪些数据类型</p>
+<p>SELECT SUM(last_name),AVG(last_name) FROM employees;<br>SELECT SUM(hiredate),AVG(hiredate) FROM employees;</p>
+<p>SELECT MAX(last_name),MIN(last_name) FROM employees;<br>SELECT MAX(hiredate),MIN(hiredate) FROM employees;</p>
+<p>SELECT COUNT(commission_pct) FROM employees;<br>SELECT COUNT(last_name) FROM employees;</p>
+<p>#3.是否忽略null</p>
+<p>SELECT SUM(commission_pct),AVG(commission_pct) FROM employees;</p>
+<p>SELECT commission_pct FROM employees;</p>
+<p>SELECT SUM(commission_pct),AVG(commission_pct),SUM(commission_pct)/35,AVG(commission_pct)/107 FROM employees;</p>
+<p>SELECT MAX(commission_pct),MIN(commission_pct) FROM employees;</p>
+<p>SELECT COUNT(commission_pct) FROM employees;</p>
+<p>#4.和distinct搭配</p>
+<p>SELECT SUM(DISTINCT salary),SUM(salary) FROM employees;</p>
+<p>SELECT COUNT(DISTINCT salary),COUNT(salary) FROM employees;</p>
+<p>#5.count函数详解</p>
+<p>SELECT COUNT(salary) FROM employees;<br>SELECT COUNT(<em>) FROM employees;<br>SELECT COUNT(1) FROM employees;<br>/</em><br>效率上：<br>MyISAM存储引擎，count(<em>)最高<br>InnoDB存储引擎，count(</em>)和count(1)效率&gt;count(字段)<br>*/</p>
+<p>#6.和分组函数一同查询的字段有限制</p>
+<p>SELECT AVG(salary),employee_id FROM employees;</p>
+<p>#课后题<br>#1.查询员工表中最大入职时间和最小入职时间的相差天数<br>MAX(hiredate) MIN(hiredate)</p>
+<p>SELECT DATEDIFF(MAX(hiredate),MIN(hiredate)) difference<br>FROM employees;</p>
+<p>SELECT DATEDIFF(NOW(),’2021-9-17’);</p>
+<p>#2.查询部门编号为90的员工个数<br>SELECT COUNT(*)<br>FROM employees<br>WHERE <code>department_id</code>=90;</p>
+</blockquote>
+<h4 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h4><p>语法</p>
+<p>select 分组函数,分组后的字段 </p>
+<p>from 表 </p>
+<p>【where 筛选条件】 </p>
+<p>group by 分组的字段 </p>
+<p>【having 分组后的筛选】 </p>
+<p>【order by 排序列表】</p>
+<p>特点</p>
+<p>1.分组查询中的筛选条件分为两类</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">使用关键词</th>
+<th align="center">筛选的表</th>
+<th align="center">位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">分组前筛选</td>
+<td align="center">where</td>
+<td align="center">原始表</td>
+<td align="center">group by前</td>
+</tr>
+<tr>
+<td align="center">分组后筛选</td>
+<td align="center">having</td>
+<td align="center">分组后的结果</td>
+<td align="center">group by后</td>
+</tr>
+</tbody></table>
+<ul>
+<li>分组函数做条件肯定是放在having子句中</li>
+<li>能用分组前筛选的，就优先考虑使用分组前筛选</li>
+</ul>
+<p>2.group by子句支持单个字段分组，多个字段分组(多个字段之间用逗号隔开没有顺序要求),表达式或函数(使用较少)</p>
+<p>3.也可以添加排序(排序放在整个分组查询的最后)</p>
+<blockquote>
+<p>#引入：查询每个部门的平均工资<br>USE <code>myemployees</code>;</p>
+<p>SELECT AVG(salary) FROM employees;</p>
+<p>#简单分组查询<br>#案例1.查询每个工种的最高工资<br>SELECT MAX(salary),job_id<br>FROM employees<br>GROUP BY job_id;</p>
+<p>#案例2.查询每个位置上的部分个数<br>SELECT COUNT(*),<code>location_id</code><br>FROM <code>departments</code><br>GROUP BY <code>location_id</code>;</p>
+<p>#添加筛选条件<br>#案例1.查询邮箱中包含a字符，每个部门的平均工资<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>WHERE <code>email</code> LIKE ‘%a%’<br>GROUP BY <code>department_id</code>;</p>
+<p>#案例2.查询有奖金的每个领导手下员工的最高工资<br>SELECT MAX(salary),<code>manager_id</code><br>FROM <code>employees</code><br>WHERE <code>commission_pct</code> IS NOT NULL<br>GROUP BY <code>manager_id</code>;</p>
+<p>#添加复杂的筛选条件<br>#案例1.查询哪个部门的员工个数&gt;2<br>SELECT COUNT( * ),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code><br>HAVING COUNT( * )&gt;2;</p>
+<p>#案例2.查询每个工种有奖金的员工的最高工资&gt;12000的工种编号和最高工资<br>SELECT MAX(salary),<code>job_id</code><br>FROM <code>employees</code><br>GROUP BY <code>job_id</code><br>HAVING MAX(salary)&gt;12000;</p>
+<p>#案例3.查询领导编号&gt;102的每个领到手下的最低工资&gt;5000的领导编号是呢个，以及最低工资<br>SELECT MIN(salary),<code>manager_id</code><br>FROM <code>employees</code><br>WHERE <code>manager_id</code>&gt;102<br>GROUP BY <code>manager_id</code><br>HAVING MIN(salary)&gt;5000;</p>
+<p>#按表达式或者函数分组<br>#案例1.按员工姓名的长度分组，查询每一组的员工个数，筛选员工个数&gt;5的有呢些<br>SELECT COUNT( * ),LENGTH(last_name) len_name<br>FROM <code>employees</code><br>GROUP BY LENGTH(last_name)<br>HAVING COUNT( * )&gt;5;<br>#——————————————<br>SELECT COUNT( * ) c,LENGTH(last_name) len_name<br>FROM <code>employees</code><br>GROUP BY len_name<br>HAVING c&gt;5;</p>
+<p>#按多字段分组<br>#案例：查询每个部门每个工种的平均工资<br>SELECT AVG(salary),<code>department_id</code>,<code>job_id</code><br>FROM employees<br>GROUP BY <code>department_id</code>,<code>job_id</code>;</p>
+<p>#添加排序<br>#案例1：查询每个部门每个工种的平均工资，并且按平均工资的高低显示<br>SELECT AVG(salary),<code>department_id</code>,<code>job_id</code><br>FROM employees<br>GROUP BY <code>department_id</code>,<code>job_id</code><br>ORDER BY AVG(salary) DESC;</p>
+<p>#案例2：查询每个部门每个工种的平均工资，并且按平均工资的高低显示,并且平均工资高于10000，部门号不为空<br>SELECT AVG(salary),<code>department_id</code>,<code>job_id</code><br>FROM employees<br>WHERE department_id IS NOT NULL<br>GROUP BY <code>department_id</code>,<code>job_id</code><br>HAVING AVG(salary)&gt;10000<br>ORDER BY AVG(salary) DESC;</p>
+</blockquote>
+<h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><ul>
+<li><p>多表查询</p>
+<pre><code>查询的字段来自多个表
+</code></pre>
+</li>
+<li><p>笛卡尔乘积现象</p>
+<pre><code>表1：m行  表2：n行  结果m*n行
+</code></pre>
+</li>
+<li><p>分类</p>
+<blockquote>
+<p>​    按年代分类：<br>​        sql92<br>​        sql99【推荐】：mysql支持内连接+外连接（左+右）+交叉连接<br>​    按功能分类：<br>​        内连接<br>​            等值连接<br>​            非等值连接<br>​            自连接<br>​        外连接<br>​            左外连接<br>​            右外连接<br>​            全外连接<br>​        交叉连接</p>
+<p>SELECT * FROM beauty;<br>SELECT * FROM boys;</p>
+<p>SELECT NAME,boyName FROM boys,beauty<br>WHERE beauty.boyfriend_id = boys.id; </p>
+</blockquote>
+</li>
+<li><p>sql92标准</p>
+</li>
+</ul>
+<blockquote>
+<p>#1.等值连接<br>#案例1.查询女神名对应的男神名<br>SELECT NAME,boyName FROM boys,beauty<br>WHERE beauty.boyfriend_id = boys.id;</p>
+<p>#案例2.查询员工名和对应的部门名<br>SELECT <code>last_name</code>,<code>department_name</code><br>FROM <code>employees</code>,<code>departments</code><br>WHERE <code>employees</code>.<code>department_id</code>=<code>departments</code>.<code>department_id</code>;</p>
+<p>#案例3.查询员工名，工种号，工种名<br>SELECT <code>last_name</code>,<code>employees</code>.<code>job_id</code>,<code>job_title</code><br>FROM <code>employees</code>,<code>jobs</code><br>WHERE <code>employees</code>.<code>job_id</code>=<code>jobs</code>.<code>job_id</code>;<br>#———————————————————————————–<br>#如果为表起了别名，则查询字段就不能使用原来的表名去限定<br>SELECT <code>last_name</code>,e.<code>job_id</code>,<code>job_title</code><br>FROM <code>employees</code> e,<code>jobs</code> j<br>WHERE e.<code>job_id</code>=j.<code>job_id</code>;</p>
+<p>#可以加筛选<br>#案例1.查询有奖金的员工名、部门名<br>SELECT last_name,department_name,<code>commission_pct</code><br>FROM <code>employees</code> e,<code>departments</code> d<br>WHERE d.<code>department_id</code>=e.<code>department_id</code><br>AND e.<code>commission_pct</code> IS NOT NULL;</p>
+<p>#案例2.查询城市名中第二个字符为o的部门名和城市名<br>SELECT <code>department_name</code>,<code>city</code><br>FROM <code>departments</code> d,<code>locations</code> l<br>WHERE d.<code>location_id</code>=l.<code>location_id</code><br>AND city LIKE ‘_o%’;</p>
+<p>#可以加分组<br>#案例1.查询每个城市的部门个数<br>SELECT COUNT(*) 个数,city<br>FROM <code>departments</code> d,<code>locations</code> l<br>WHERE d.<code>location_id</code>=l.<code>location_id</code><br>GROUP BY city;</p>
+<p>#案例2.查询有奖金的每个部门的部门号和部门的领导编号和该部门的最低工资<br>SELECT <code>department_name</code>,d.<code>manager_id</code>,MIN(salary)<br>FROM <code>departments</code> d,<code>employees</code> e<br>WHERE d.<code>department_id</code>=e.<code>department_id</code><br>AND <code>commission_pct</code> IS NOT NULL<br>GROUP BY <code>department_name</code>,d.<code>manager_id</code>;</p>
+<p>#可以加排序<br>#案例1.查询每个工种的工种名和员工的个数，并且按员工个数降序<br>SELECT <code>job_title</code>,COUNT(<em>)<br>FROM <code>employees</code> e,<code>jobs</code> j<br>WHERE e.<code>job_id</code>=j.<code>job_id</code><br>GROUP BY <code>job_title</code><br>ORDER BY COUNT(</em>) DESC;</p>
+<p>#可以三表连接<br>#查询员工名，部门名和所在城市<br>SELECT last_name,department_name,city<br>FROM employees e,departments d,locations l<br>WHERE e.department_id = d.department_id<br>AND d.location_id = l.location_id;</p>
+<p>CREATE TABLE job_grades<br>(grade_level VARCHAR(3),<br> lowest_sal  INT,<br> highest_sal INT);</p>
+<p>INSERT INTO job_grades<br>VALUES (‘A’, 1000, 2999);</p>
+<p>INSERT INTO job_grades<br>VALUES (‘B’, 3000, 5999);</p>
+<p>INSERT INTO job_grades<br>VALUES(‘C’, 6000, 9999);</p>
+<p>INSERT INTO job_grades<br>VALUES(‘D’, 10000, 14999);</p>
+<p>INSERT INTO job_grades<br>VALUES(‘E’, 15000, 24999);</p>
+<p>INSERT INTO job_grades<br>VALUES(‘F’, 25000, 40000);</p>
+<p>#2.非等值连接<br>#案例1.查询员工的工资和工资级别<br>SELECT salary,grade_level<br>FROM employees e,job_grades g<br>WHERE salary BETWEEN g.<code>lowest_sal</code> AND g.highest_sal;</p>
+<p>#3.自连接<br>#相当于等值连接，只不过是在自己的表中连接<br>#案例：查询员工名和上级名称<br>SELECT e.employee_id,e.last_name,m.employee_id,m.last_name<br>FROM employees e,employees m<br>WHERE e.manager_id = m.employee_id;</p>
+</blockquote>
+<ul>
+<li><p>sql99语法</p>
+<p>语法：</p>
+<pre><code>select 查询列表
+from 表1 别名 【连接类型】
+join 表2 别名
+on 连接条件
+【where筛选条件】
+【group by 分组】
+【having 筛选条件】
+【order by 排序列表】
+</code></pre>
+<p>分类：</p>
+<pre><code>内连接：inner
+外连接：
+    左外连接 left 【outer】
+    右外连接 right 【outer】
+    全外连接 full 【outer】
+交叉连接：cross
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>#一）内连接<br>#1.等值连接<br>#案例1.查询员工名、部门名<br>SELECT last_name,department_name<br>FROM <code>departments</code> d<br>INNER JOIN <code>employees</code> e<br>ON e.<code>department_id</code>=d.<code>department_id</code>;</p>
+<p>#案例2.查询名字中包含a的员工名和工种名<br>SELECT last_name,<code>job_title</code><br>FROM <code>employees</code> e<br>INNER JOIN <code>jobs</code> j<br>WHERE e.<code>last_name</code> LIKE ‘%e%’;</p>
+<p>#案例3.查询部门个数&gt;3的城市名和部门个数<br>SELECT city,COUNT( * ) 部门个数<br>FROM <code>departments</code> d<br>INNER JOIN <code>locations</code> l<br>ON d.<code>location_id</code>=l.<code>location_id</code><br>GROUP BY city<br>HAVING COUNT( * )&gt;3;</p>
+<p>#案例4.查询哪个部门的员工个数&gt;3的部门名和员工个数，并按个数降序<br>SELECT COUNT( * ) 个数,<code>department_name</code><br>FROM <code>employees</code> e<br>INNER JOIN <code>departments</code> d<br>ON e.<code>department_id</code>=d.<code>department_id</code><br>GROUP BY <code>department_name</code><br>HAVING COUNT(  *)&gt;3<br>ORDER BY COUNT( * ) DESC;</p>
+<p>#案例5.查询员工名、工种名、并按部门名降序<br>SELECT last_name,<code>department_name</code>,<code>job_title</code><br>FROM <code>employees</code> e<br>INNER JOIN <code>departments</code> d ON e.<code>department_id</code>=d.<code>department_id</code><br>INNER JOIN <code>jobs</code> j ON e.<code>job_id</code>=j.<code>job_id</code><br>ORDER BY <code>department_name</code> DESC;</p>
+<p>#2.非等值连接<br>#案例1.查询员工工资级别<br>SELECT salary,grade_level<br>FROM <code>employees</code> e<br>JOIN <code>job_grades</code> j<br>ON e.salary BETWEEN j.<code>lowest_sal</code> AND j.<code>highest_sal</code>;</p>
+<p>#案例2.查询每个工资级别的个数&gt;20，并且按工资级别降序<br>SELECT COUNT( * ),grade_level<br>FROM <code>employees</code> e<br>JOIN <code>job_grades</code> j<br>ON e.salary BETWEEN j.<code>lowest_sal</code> AND j.<code>highest_sal</code><br>GROUP BY grade_level<br>HAVING COUNT( * ) &gt; 20<br>ORDER BY grade_level DESC;</p>
+<p>#3.自连接<br>#查询员工的名字包含字符k、上级的名字<br>SELECT e.last_name,m.last_name<br>FROM <code>employees</code> e<br>JOIN <code>employees</code> m<br>ON e.<code>manager_id</code> = m.<code>employee_id</code><br>WHERE e.last_name LIKE ‘%k%’;</p>
+<p>#二）外连接<br>/*<br>应用场景<br>    用于查询一个表中有，另一个表中没有的记录</p>
+<p>特点<br>    1.外链接的查询为主表中的所有记录<br>        如果从表中有匹配的，则显示匹配的值<br>        如果从表中没有与其匹配的，则显示为null<br>        外连接查询结果=内连接结果+加上主表中有而从表中没有的记录<br>    2.左外连接，left join左边的是主表<br>      右外连接，right join右边的是主表<br>    3.左外和右外交换两个表的顺序，可以实现同样的效果<br>    4.全外连接=内连接结果+表1中有表2中没有+表2中有表1中没有<br>*/<br>#引入:查询男朋友 不在男神表的女神名<br>#左外连接<br>USE girls;<br>SELECT b.name,bo. *<br>FROM beauty b<br>LEFT OUTER JOIN boys bo<br>ON b.<code>boyfriend_id</code>=bo.<code>id</code><br>WHERE bo.id IS NULL;</p>
+<p>#右外连接<br>SELECT b.name,bo.*<br>FROM boys bo<br>RIGHT OUTER JOIN beauty b<br>ON b.<code>boyfriend_id</code>=bo.<code>id</code><br>WHERE bo.id IS NULL;</p>
+<p>#案例1.哪个部门没有员工<br>#左外<br>USE <code>myemployees</code>;<br>SELECT d.*,e.<code>employee_id</code><br>FROM <code>departments</code> d<br>LEFT OUTER JOIN <code>employees</code> e<br>ON d.<code>department_id</code>=e.<code>department_id</code><br>WHERE e.<code>employee_id</code> IS NULL;</p>
+<p>#右外<br>SELECT d.*,e.<code>employee_id</code><br>FROM <code>employees</code> e<br>RIGHT OUTER JOIN <code>departments</code> d<br>ON d.<code>department_id</code>=e.<code>department_id</code><br>WHERE e.<code>employee_id</code> IS NULL;</p>
+<p>#全外连接（不支持）<br>USE girls;<br>SELECT b.name,bo.*<br>FROM beauty b<br>FULL OUTER JOIN boys bo<br>ON b.<code>boyfriend_id</code>=bo.<code>id</code>;</p>
+<p>#交叉连接（笛卡尔乘积）<br>USE girls;<br>SELECT b.<em>,bo.</em><br>FROM beauty b<br>CROSS JOIN boys bo;</p>
+<p>#习题<br>#1.查询编号&gt;3的女神的男朋友的信息，如果有则列出详细，如果没有用null填充<br>SELECT b.id,b.name,bo.*<br>FROM beauty b<br>LEFT OUTER JOIN boys bo<br>ON b.<code>boyfriend_id</code>=bo.<code>id</code><br>WHERE b.id&gt;3;</p>
+<p>#2.查询哪个城市没有部门<br>USE <code>myemployees</code>;</p>
+<p>SELECT city,d.*<br>FROM <code>departments</code> d<br>RIGHT OUTER JOIN <code>locations</code> l<br>ON d.<code>location_id</code>=l.<code>location_id</code><br>WHERE d.<code>department_id</code> IS NULL;</p>
+<p>#3.查询部门名为SAL或IT的员工信息<br>SELECT e.*,d.<code>department_name</code><br>FROM <code>departments</code> d<br>LEFT OUTER JOIN <code>employees</code> e<br>ON d.<code>department_id</code>=e.<code>department_id</code><br>WHERE d.<code>department_name</code> IN(‘SAL’, ‘IT’);</p>
+</blockquote>
+<h4 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a><strong>子查询</strong></h4><ul>
+<li>含义<pre><code>出现在其他语句中的select语句，称为子查询或内查询
+外部的查询语句，称为主查询或外查询
+</code></pre>
+</li>
+<li>分类<br>按子查询出现的位置：<pre><code>select后
+    仅仅支持标量子查询
+from后
+    支持表子查询
+where或者having后
+    标量子查询（单行）★
+    列子查询（多行）★
+    行子查询
+exists后（相关子查询）
+    表子查询
+    
+</code></pre>
+按结果集的行列数不同：<pre><code>标量子查询（结果集一行一列）
+列子查询（一列多行）
+行子查询（一行多列）
+表子查询（一般为多行多列）
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>#一、where或者having后<br>#标量子查询（单行）<br>#案例1.谁的工资比Abel高<br>USE <code>myemployees</code>;<br>SELECT *<br>FROM <code>employees</code><br>WHERE salary&gt;(<br>    SELECT salary<br>    FROM employees<br>    WHERE last_name=’Abel’<br>);</p>
+<p>#案例2.返回job_id与141号员工相同，salary比143号员工多的员工 姓名，job_id和工资<br>SELECT job_id<br>FROM <code>employees</code><br>WHERE <code>employee_id</code> =141;</p>
+<p>SELECT salary<br>FROM <code>employees</code><br>WHERE <code>employee_id</code> =143;</p>
+<p>SELECT last_name,job_id,salary<br>FROM <code>employees</code><br>WHERE job_id = (<br>    SELECT job_id<br>    FROM <code>employees</code><br>    WHERE <code>employee_id</code> =141<br>)AND salary &gt; (<br>    SELECT salary<br>    FROM <code>employees</code><br>    WHERE <code>employee_id</code> =143<br>);</p>
+<p>#案例3.返回公司工资最少的员工的last_name，job_id和salary<br>SELECT lasT_name,job_id,salary<br>FROM employees<br>WHERE salary=(<br>    SELECT MIN(salary)<br>    FROM employees<br>);</p>
+<p>#案例4.查询最低工资大于50号部门最低工资的部门id和其最低工资<br>SELECT MIN(salary),department_id<br>FROM <code>employees</code><br>GROUP BY <code>department_id</code><br>HAVING MIN(salary)&gt;(<br>    SELECT MIN(salary)<br>    FROM employees<br>    WHERE department_id = 50<br>);</p>
+<p>#非法使用标量子查询</p>
+<p>#列子查询（多行）<br>/*<br>多行比较操作符:<br>    in/not in  等于列表中的任意一个<br>    any|some  和子查询返回的某一个值比较<br>    all  和子查询返回的所有值比较<br>*/</p>
+<p>#案例1.返回location_id是1400或者1700的部门中所有员工姓名<br>SELECT last_name<br>FROM <code>employees</code><br>WHERE <code>department_id</code> IN(<br>    SELECT DISTINCT <code>department_id</code><br>    FROM <code>departments</code><br>    WHERE <code>location_id</code> IN(1400,1700)<br>);</p>
+<p>#案例2.返回其他工种中比job_id为IT_PROG部门任一工资低的员工的：工号、姓名、job_id以及salary<br>#（1）job_id为IT_PROG部门任一工资<br>SELECT DISTINCT salary   #DISTINCT用于去重<br>FROM <code>employees</code><br>WHERE job_id = ‘IT_PROG’</p>
+<p>#（2）员工的：工号、姓名、job_id以及salary<br>SELECT last_name,<code>employee_id</code>,<code>job_id</code>,salary<br>FROM <code>employees</code><br>WHERE salary&lt;ANY(<br>    SELECT DISTINCT salary<br>    FROM <code>employees</code><br>    WHERE job_id = ‘IT_PROG’<br>) AND job_id&lt;&gt;’IT_PROG’;</p>
+<p>#案例3.返回其他工种中比job_id为IT_PROG部门所有工资都低的员工的：工号、姓名、job_id以及salary<br>SELECT last_name,<code>employee_id</code>,<code>job_id</code>,salary<br>FROM <code>employees</code><br>WHERE salary&lt;ALL(<br>    SELECT DISTINCT salary<br>    FROM <code>employees</code><br>    WHERE job_id = ‘IT_PROG’<br>) AND job_id&lt;&gt;’IT_PROG’;<br>#——————————————————————<br>SELECT last_name,<code>employee_id</code>,<code>job_id</code>,salary<br>FROM <code>employees</code><br>WHERE salary&lt;(<br>    SELECT MIN(salary)<br>    FROM <code>employees</code><br>    WHERE job_id = ‘IT_PROG’<br>) AND job_id&lt;&gt;’IT_PROG’;</p>
+<p>#行子查询（多列）<br>#案例1.查询员工编号最小并且工资最高的员工信息<br>SELECT *<br>FROM <code>employees</code><br>WHERE (<code>employee_id</code>,salary)=(<br>    SELECT MIN(<code>employee_id</code>),MAX(salary)<br>    FROM <code>employees</code><br>);</p>
+<p>#———————————————————<br>SELECT MIN(<code>employee_id</code>)<br>FROM <code>employees</code></p>
+<p>SELECT MAX(salary)<br>FROM <code>employees</code></p>
+<p>SELECT *<br>FROM <code>employees</code><br>WHERE <code>employee_id</code>=(<br>    SELECT MIN(<code>employee_id</code>)<br>    FROM <code>employees</code><br>) AND salary=(<br>    SELECT MAX(salary)<br>    FROM <code>employees</code><br>);</p>
+<p>#二、select后<br>#案例1.查询每个部门的员工个数<br>#用连接也可实现(所以弱化了)<br>SELECT d.<em>,(<br>    SELECT COUNT(</em>)<br>    FROM <code>employees</code> e<br>    WHERE e.<code>department_id</code> = d.<code>department_id</code><br>) 个数<br>FROM <code>departments</code> d;</p>
+<p>#案例2.查询员工号=102的部门名<br>SELECT (<br>    SELECT <code>department_name</code><br>    FROM <code>departments</code> d<br>    INNER JOIN <code>employees</code> e<br>    ON d.<code>department_id</code> = e.<code>department_id</code><br>    WHERE e.<code>employee_id</code>=102<br>) 部门名;</p>
+<p>#三、from后<br>#案例1.查询每个部门的平均工资的工资等级<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code>;</p>
+<p>#必须起别名<br>SELECT ag_dep.*,g.<code>grade_level</code><br>FROM(<br>    SELECT AVG(salary) ag,<code>department_id</code><br>    FROM <code>employees</code><br>    GROUP BY <code>department_id</code><br>) ag_dep<br>INNER JOIN job_grades g<br>ON ag_dep.ag BETWEEN <code>lowest_sal</code> AND <code>highest_sal</code>;</p>
+<p>#四、exists后<br>/*<br>语法：<br>    exists（完整的查询语句）<br>结果：<br>    1或0</p>
+<p>*/<br>SELECT EXISTS(SELECT <code>employee_id</code> FROM <code>employees</code>);</p>
+<p>#案例1.查询有员工的部门名<br>#特殊<br>SELECT <code>department_name</code><br>FROM <code>departments</code> d<br>WHERE EXISTS(<br>    SELECT *<br>    FROM <code>employees</code> e<br>    WHERE d.<code>department_id</code>=e.<code>department_id</code><br>);</p>
+<p>#使用in的方式代替<br>SELECT <code>department_name</code><br>FROM <code>departments</code> d<br>WHERE d.<code>department_id</code> IN(<br>    SELECT <code>department_id</code><br>    FROM <code>employees</code><br>);</p>
+<p>#案例2.查询没有女朋友的男神信息<br>#not in<br>SELECT bo.*<br>FROM boys bo<br>WHERE bo.id NOT IN(<br>    SELECT <code>boyfriend_id</code><br>    FROM <code>beauty</code><br>);</p>
+<p>#exists<br>SELECT bo.*<br>FROM boys bo<br>WHERE NOT EXISTS(<br>    SELECT <code>boyfriend_id</code><br>    FROM <code>beauty</code> b<br>    WHERE bo.id=b.<code>boyfriend_id</code><br>);</p>
+<p>#习题<br>#6.查询管理者为King的员工姓名和工资<br>#自连接<br>SELECT last_name,salary<br>FROM <code>employees</code><br>WHERE <code>manager_id</code> IN(<br>    SELECT DISTINCT <code>employee_id</code><br>    FROM <code>employees</code><br>    WHERE last_name = ‘K_ing’<br>);</p>
+<p>#习题<br>#1.查询工资最低的的员工信息last_name ,salary</p>
+<p>#①查询最低工资<br>SELECT MIN(salary)<br>FROM employees;<br>#②查询last_name，salary，要求salary=最低工资<br>SELECT last_name,salary<br>FROM <code>employees</code><br>WHERE salary=(<br>    SELECT MIN(salary)<br>    FROM employees<br>);</p>
+<p>#2.查询平均工资最低的部门信息</p>
+<p>#方法一</p>
+<p>#①平均工资<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code>;<br>#②最低平均工资<br>SELECT MIN(ag)<br>FROM(<br>    SELECT AVG(salary) ag,<code>department_id</code><br>    FROM <code>employees</code><br>    GROUP BY <code>department_id</code><br>) ag_dep;<br>#③最低平均工资的部门编号<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code><br>HAVING AVG(salary)=(<br>    SELECT MIN(ag)<br>    FROM(<br>        SELECT AVG(salary) ag,<code>department_id</code><br>        FROM <code>employees</code><br>        GROUP BY <code>department_id</code><br>    ) ag_dep<br>);<br>#④部门信息<br>SELECT d.*<br>FROM <code>departments</code> d<br>WHERE d.<code>department_id</code>=(<br>    SELECT <code>department_id</code><br>    FROM <code>employees</code><br>    GROUP BY <code>department_id</code><br>    HAVING AVG(salary)=(<br>        SELECT MIN(ag)<br>        FROM(<br>            SELECT AVG(salary) ag,<code>department_id</code><br>            FROM <code>employees</code><br>            GROUP BY <code>department_id</code><br>        ) ag_dep<br>    )<br>);</p>
+<p>#方法二：<br>#①平均工资<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code>;<br>#②最低平均工资的部门编号<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code><br>ORDER BY AVG(salary)<br>LIMIT 1;</p>
+<p>#③部门信息<br>SELECT d.*<br>FROM <code>departments</code> d<br>WHERE d.<code>department_id</code>=(<br>    SELECT <code>department_id</code><br>    FROM <code>employees</code><br>    GROUP BY <code>department_id</code><br>    ORDER BY AVG(salary)<br>    LIMIT 1<br>);</p>
+<p>#3.查询平均工资最低的部门信息和部门平均工资<br>#①平均工资<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code>;<br>#–最低平均工资的部门编号<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code><br>ORDER BY AVG(salary)<br>LIMIT 1;<br>#②部门信息和部门平均工资<br>SELECT d.*,ag<br>FROM <code>departments</code> d<br>JOIN(<br>    SELECT AVG(salary) ag,<code>department_id</code><br>    FROM <code>employees</code><br>    GROUP BY <code>department_id</code><br>    ORDER BY AVG(salary)<br>    LIMIT 1<br>) ag_dep<br>ON d.<code>department_id</code>=ag_dep.<code>department_id</code>;</p>
+<p>#4.查询平均工资最高的job信息</p>
+<p>#5.查询平均工资高于公司平均工资的部门有呢些<br>#①公司平均工资<br>SELECT AVG(salary)<br>FROM <code>employees</code>;<br>#②各部门的平均工资<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code>;<br>#③平均工资高于公司平均工资的部门<br>SELECT AVG(salary),<code>department_id</code><br>FROM <code>employees</code><br>GROUP BY <code>department_id</code><br>HAVING AVG(salary)&gt;(<br>    SELECT AVG(salary)<br>    FROM <code>employees</code><br>);</p>
+<p>#6.查询出公司中所有manger的详细信息<br>#–查询所有manger的员工编号<br>SELECT DISTINCT manager_id<br>FROM <code>employees</code>;<br>#–查询详细信息<br>SELECT *<br>FROM <code>employees</code><br>WHERE <code>employee_id</code>=ANY(<br>    SELECT DISTINCT manager_id<br>    FROM <code>employees</code><br>);</p>
+<p>#7.各部门中 最高工资中最低的那个部门的 最低工资是多少<br>#①最高工资<br>SELECT MAX(salary),<code>department_id</code><br>FROM employees<br>GROUP BY <code>department_id</code><br>ORDER BY MAX(salary)<br>LIMIT 1;<br>#②最低工资<br>SELECT MIN(salary),<code>department_id</code><br>FROM <code>employees</code><br>WHERE <code>department_id</code>=(<br>    SELECT <code>department_id</code><br>    FROM employees<br>    GROUP BY <code>department_id</code><br>    ORDER BY MAX(salary)<br>    LIMIT 1<br>);</p>
+<p>#8.查询平均工资最高的部门的 manger 的详细信息：last_name  department_id  email  salary<br>#①平均工资最高的部门<br>SELECT AVG(salary),<code>department_id</code><br>FROM employees<br>GROUP BY <code>department_id</code><br>ORDER BY AVG(salary) DESC<br>LIMIT 1;</p>
+<p>#②manger 的详细信息</p>
+<p>SELECT last_name,d.department_id,email,salary<br>FROM <code>employees</code> e<br>INNER JOIN <code>departments</code> d<br>ON d.<code>manager_id</code>=e.<code>employee_id</code><br>WHERE d.<code>department_id</code>=(<br>    SELECT <code>department_id</code><br>    FROM employees<br>    GROUP BY <code>department_id</code><br>    ORDER BY AVG(salary) DESC<br>    LIMIT 1<br>);</p>
+</blockquote>
+<h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><ul>
+<li><p>应用场景</p>
+<pre><code>当要显示的数据一页无法显示全部，需要分页提交sql请求
+</code></pre>
+</li>
+<li><p>语法</p>
+<p>执行顺序</p>
+<pre><code>select 查询列表-----------7
+from 表-------------------1
+【join type join 表2------2
+on 连接条件---------------3
+where 筛选条件------------4
+group by 分组字段---------5
+having 分组后筛选---------6
+order by 排序的字段】-----8
+limit [offset]，size；----9
+</code></pre>
+<p>  offset要显示条目的起始索引（起始索引从0开始）<br>  size要显示的条目个数</p>
+</li>
+<li><p>特点</p>
+<pre><code>公式：要显示的页数 page   每页的条目数size
+select 查询列表
+from 表
+limit （page-1）*size,size; 
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>#案例1.查询前五条员工信息<br>SELECT * FROM employees LIMIT 0,5;<br>#—————————————————-<br>SELECT * FROM employees LIMIT 5;</p>
+<p>#案例2.查询第11–25条<br>SELECT * FROM employees LIMIT 10,15;</p>
+<p>#案例3.有奖金的员工信息，并且工资较高的前10名显示出来<br>SELECT *<br>FROM employees<br>WHERE <code>commission_pct</code> IS NOT NULL<br>ORDER BY salary DESC<br>LIMIT 10;</p>
+</blockquote>
+<h4 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h4><ul>
+<li><p>含义</p>
+<p>​    union 联合 合并：将多条查询语句的结果合并成一个结果</p>
+</li>
+<li><p>语法</p>
+<pre><code>查询语句1
+union 【all】
+查询语句2
+union 【all】
+......
+</code></pre>
+</li>
+<li><p>应用场景</p>
+<pre><code>要查询的结果来自多个表，且多个表没有直接的连接关系，但查询的信息一致
+</code></pre>
+</li>
+<li><p>特点</p>
+<pre><code>1.要求多条查询语句的查询列数是一致的
+</code></pre>
+<p>​    2.要求多条查询语句的查询的每一列的类型和顺序最好一致</p>
+<p>​    3.union关键字默认去重，如果使用union all 可以包含重复项</p>
+</li>
+</ul>
+<blockquote>
+<p>#引例：查询部门编号&gt;90或邮箱包含a的员工信息<br>SELECT *<br>FROM <code>employees</code><br>WHERE email LIKE ‘%a%’ OR <code>department_id</code>&gt;90;<br>#——————————————–<br>SELECT *<br>FROM <code>employees</code><br>WHERE email LIKE ‘%a%’<br>UNION SELECT *<br>FROM <code>employees</code><br>WHERE <code>department_id</code>&gt;90;</p>
+<p>#案例：查询中国用户中男性的信息以及外国用户中男性的用户信息<br>SELECT *<br>FROM <code>t_ca</code><br>WHERE <code>csex</code>=’男’<br>UNION SELECT *<br>FROM <code>t_ua</code><br>WHERE <code>tGender</code>=’male’;</p>
+</blockquote>
+<h3 id="DML语言"><a href="#DML语言" class="headerlink" title="DML语言"></a>DML语言</h3><p>数据操作语言<br>    插入 insert<br>    修改 update<br>    删除 delete</p>
+<h4 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h4><blockquote>
+<p>#方式一：<br>/*<br>语法：<br>    insert into 表名（列名……）<br>    values（值1，，，）</p>
+<p>*/</p>
+<p>#1.插入的值得类型要与列的类型一致兼容<br>INSERT INTO beauty(id,NAME,sex,<code>borndate</code>,<code>phone</code>,<code>photo</code>,<code>boyfriend_id</code>)<br>VALUES(13,’唐艺昕’,’女’,’1990-4-23’,’123456789’,NULL,2);</p>
+<p>SELECT *<br>FROM beauty;</p>
+<p>#2.不可以为null的列必须插入值<br>#可以为空的？<br>INSERT INTO beauty(id,NAME,sex,<code>borndate</code>,<code>phone</code>,<code>photo</code>,<code>boyfriend_id</code>)<br>VALUES(13,’唐艺昕’,’女’,’1990-4-23’,’123456789’,NULL,2);<br>#——————————————————————————————————–<br>INSERT INTO beauty(id,NAME,sex,<code>borndate</code>,<code>phone</code>,<code>boyfriend_id</code>)<br>VALUES(14,’唐艺昕’,’女’,’1990-4-23’,’123456789’,2);</p>
+<p>#3.列的顺序是否可以调换？<br>INSERT INTO beauty(NAME,sex,id,phone)<br>VALUES(‘蒋欣’,’女’,15,’147852369’);</p>
+<p>#4.可以省略列名，默认所有列<br>INSERT INTO beauty<br>VALUES(16,’关晓彤’,’女’,’1992-4-20’,’159842637’,NULL,2);</p>
+<p>#方式二：<br>/*<br>语法：<br>    insert into 表名<br>    set 列名=值，列名=值，，，<br>*/<br>SELECT INTO beauty<br>SET id=17,<code>name</code>=’刘涛’,phone=’369852147’;</p>
+<p>#两种方式大pk<br>#方式一支持插入多行<br>INSERT INTO beauty(id,NAME,sex,<code>borndate</code>,<code>phone</code>,<code>photo</code>,<code>boyfriend_id</code>)<br>VALUES(17,’唐艺昕’,’女’,’1990-4-23’,’123456789’,NULL,4),<br>(18,’唐艺昕’,’女’,’1990-4-23’,’123456789’,NULL,4),<br>(19,’唐艺昕’,’女’,’1990-4-23’,’123456789’,NULL,4);</p>
+<p>#方式一支持子查询<br>INSERT INTO beauty(id,NAME,phone)<br>SELECT 20,’宋茜’,’123456789’;</p>
+</blockquote>
+<h4 id="修改语句"><a href="#修改语句" class="headerlink" title="修改语句"></a>修改语句</h4><p>1.修改单表记录<br>语法：<br>    update 表名<br>    set 列=新值，列=新值，…<br>    where 筛选条件;</p>
+<p>2.修改多表<br>sql99语法<br>    update 表1 别名<br>    inner|left|right join 表2 别名<br>    on 连接条件<br>    set 列=值，…<br>    where 筛选条件;</p>
+<blockquote>
+<p>#1.修改单表记录<br>#案例1.修改beauty表中姓唐的电话改为123456789<br>UPDATE beauty SET phone = ‘12345678’<br>WHERE NAME LIKE ‘唐%’;</p>
+<p>#2.修改多表<br>#案例1.修改张无忌的女朋友的手机号为114<br>UPDATE boys bo<br>INNER JOIN beauty b<br>ON bo.<code>id</code>=b.<code>boyfriend_id</code><br>SET b.<code>phone</code>=114<br>WHERE bo.<code>boyName</code>=’张无忌’;</p>
+<p>#案例2.修改没有男朋友的女神的男朋友为3号<br>UPDATE boys bo<br>RIGHT JOIN beauty b<br>ON bo.<code>id</code>=b.<code>boyfriend_id</code><br>SET b.<code>boyfriend_id</code>=3<br>WHERE bo.<code>id</code> IS NULL</p>
+</blockquote>
+<h4 id="删除语句"><a href="#删除语句" class="headerlink" title="删除语句"></a>删除语句</h4><ul>
+<li>方式一：delete<br>语法：<pre><code>delete from 表名
+where 筛选条件
+</code></pre>
+</li>
+<li>方式二：truncate<br>语法：<pre><code>truncate table 表名
+</code></pre>
+</li>
+<li>两种方式的对比：</li>
+</ul>
+<p>​        1.delete 可以加where 条件，truncate不能加<br>​        2.truncate删除，效率高一点<br>​        3.假如要删除的表中有自增长列，<br>​        如果用delete删除后，再插入数据，自增长列的值从断点开始，而truncate删除后，再插入数据，自增长列的值从1开始。<br>​        4.truncate删除没有返回值，delete删除有返回值<br>​        5.truncate删除不能回滚，delete删除可以回滚</p>
+<blockquote>
+<p>#方式一：delete<br>#案例1.删除手机号以8结尾的女神信息<br>DELETE FROM beauty<br>WHERE phone LIKE ‘%8’;</p>
+<p>#案例2.删除张无忌女朋友的信息<br>DELETE b<br>FROM beauty b<br>INNER JOIN boys bo<br>ON bo.<code>id</code>=b.<code>boyfriend_id</code><br>WHERE bo.<code>boyName</code>=’张无忌’;</p>
+<p>SELECT *<br>FROM boys;</p>
+<p>#案例3.删除黄晓明的信息以及他女朋友的信息<br>DELETE b,bo<br>FROM beauty b<br>INNER JOIN boys bo<br>ON bo.<code>id</code>=b.<code>boyfriend_id</code><br>WHERE bo.<code>boyName</code>=’黄晓明’;</p>
+<p>#方式二：truncate语句<br>/*如果要删除表中的自增长列，<br>    如果用delete删除，再插入数据，自增长的值从断点开始<br>    如果用truncate删除后，再插入数据，自增长列的值从1开始</p>
+<p>truncate删除没有返回值<br>delete  删除有返回值</p>
+<p>truncate删除不能回滚，delete删除可以回滚<br>*/</p>
+<p>SELECT *<br>FROM boys;</p>
+<p>DELETE FROM boys;</p>
+<p>TRUNCATE TABLE boys;</p>
+<p>INSERT INTO boys(<code>boyName</code>,<code>userCP</code>)<br>VALUES(‘李易峰’,1000),<br>(‘鹿晗’,1000),<br>(‘王一博’,1000);</p>
+</blockquote>
+<h3 id="DDL语言"><a href="#DDL语言" class="headerlink" title="DDL语言"></a>DDL语言</h3><p>数据定义语言</p>
+<p>库和表的管理</p>
+<h4 id="库的管理"><a href="#库的管理" class="headerlink" title="库的管理"></a>库的管理</h4><p>创建、修改、删除</p>
+<blockquote>
+<p>#1.库的创建</p>
+<p>#create database (if not exists) 库名</p>
+<p>CREATE DATABASE books;</p>
+<p>#2.库的修改<br>#更改库的字符集<br>ALTER DATABASE books CHARACTER SET gbk;</p>
+<p>#3.库的删除<br>DROP DATABASE books;</p>
+</blockquote>
+<h4 id="表的管理"><a href="#表的管理" class="headerlink" title="表的管理"></a>表的管理</h4><p>创建 create<br>修改 alter<br>删除 drop</p>
+<p>语法：<br>    create table if not exists 表名（<br>        列名 列的类型【（长度）约束】，<br>        列名 列的类型【（长度）约束】，<br>        列名 列的类型【（长度）约束】，<br>        …<br>        列名 列的类型【（长度）约束】<br>    ）</p>
+<blockquote>
+<p>CREATE TABLE book(<br>    id INT,            #编号<br>    bName VARCHAR(20),  #书名，最多有20个字符<br>    authorId INT,      #作者编号<br>    publishDate DATETIME  #出版日期<br>);</p>
+<p>CREATE TABLE author(<br>    id INT,<br>    au_name VARCHAR(20),<br>    nation VARCHAR(10)<br>);</p>
+<p>#2.表的修改<br>#修改列名<br>ALTER TABLE book CHANGE COLUMN publishDate pubDate DATETIME;</p>
+<p>#修改列的类型或约束<br>ALTER TABLE book MODIFY COLUMN pubDate TIMESTAMP;</p>
+<p>#添加新列<br>ALTER TABLE author ADD COLUMN annual DOUBLE;</p>
+<p>#删除列<br>ALTER TABLE book DROP COLUMN annual;</p>
+<p>#修改表名<br>ALTER TABLE author RENAME TO book_author;</p>
+<p>#3.表的删除<br>DROP TABLE IF EXISTS book_author;</p>
+<p>SHOW TABLES;</p>
+<p>ALTER DATABASE books CHARACTER SET utf8;<br>ALTER TABLE book CHARACTER SET utf8;<br>ALTER TABLE author CHARACTER SET utf8;<br>ALTER TABLE copy CHARACTER SET utf8;</p>
+<p>#4.表的复制<br>1、复制表的结构<br>create table 表名 like 旧表;<br>2、复制表的结构+数据<br>create table 表名<br>select 查询列表 from 旧表【where 筛选】;</p>
+<p>案例<br>INSERT INTO author VALUES<br>(1,’村上春树’,’日本’),<br>(2,’莫言’,’中国’),<br>(3,’冯唐’,’中国’),<br>(4,’金庸’,’中国’);</p>
+<p>SELECT * FROM Author;<br>SELECT * FROM copy2;</p>
+<p>#1.仅仅复制表的结构<br>CREATE TABLE copy LIKE author;</p>
+<p>#2.复制表的结构+数据<br>CREATE TABLE copy2 SELECT * FROM author;</p>
+<p>#只复制部分数据<br>CREATE TABLE copy3 SELECT id,au_name<br>FROM author WHERE nation=’中国’;</p>
+<p>#仅仅复制某些字段<br>CREATE TABLE copy4 SELECT id,au_name<br>FROM author WHERE 0;</p>
+</blockquote>
+<h4 id="常见的数据类型"><a href="#常见的数据类型" class="headerlink" title="常见的数据类型"></a>常见的数据类型</h4><ul>
+<li>数值型<pre><code>整型
+小数
+    定点数
+    浮点数
+</code></pre>
+</li>
+<li>字符型<pre><code>较长的文本：char varchar
+较长的文本：text blob（较长的二进制数据）    
+</code></pre>
+</li>
+<li>日期型</li>
+</ul>
+<h5 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h5><ul>
+<li><p>整型</p>
+<p>分类：</p>
+<pre><code>tinyint、smallint、mediumint、int/integer、bigint
+1        2         3           4              8
+</code></pre>
+<p>特点：</p>
+<pre><code>不设置有无符号，默认为有符号，unsigned设置无符号
+如果插入的数据超出了范围，会报out of range异常，会添入临界值
+如果不设置长度，会有默认的长度，长度代表了最大宽度（zerofill 0填充）
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>USE books;</p>
+<p>#1.如何设置无符号和有符号<br>DROP TABLE IF EXISTS tab_int;<br>CREATE TABLE tab_int(<br>    t1 INT,<br>    t2 INT UNSIGNED<br>);</p>
+<p>DESC tab_int;</p>
+</blockquote>
+<ul>
+<li><p>浮点型</p>
+<p>浮点数</p>
+<pre><code>float（M,D）
+double（M,D）
+</code></pre>
+<p>定点数</p>
+<pre><code>dec（M,D）
+decimal（M,D）
+</code></pre>
+<p>M 代表整数+小数部位<br>D 代表小数部位</p>
+<p>M 和 D 都可以省略</p>
+<pre><code>decimal  M默认为10，D默认为0
+float和double  根据插入数值的精度决定
+</code></pre>
+<p>定点型的精度较高，如果要求插入数值的精度较高如货币运算等则考虑使用</p>
+<p>原则：越简单越好，能保存数值的类型越小越好</p>
+</li>
+</ul>
+<blockquote>
+<p>CREATE TABLE tab_float(<br>    f1 FLOAT(5,2),<br>    f2 DOUBLE(5,2),<br>    f3 DECIMAL(5,2)<br>);</p>
+<p>DESC tab_float;</p>
+<p>INSERT INTO tab_float VALUES(123.45,123.45,123.45);<br>INSERT INTO tab_float VALUES(123.456,123.456,123.456);</p>
+</blockquote>
+<h5 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h5><ul>
+<li><p>较短的文本：char、varchar</p>
+</li>
+<li><p>其他：</p>
+<ul>
+<li>binary和varbinary用于保存较短的二进制</li>
+<li>enum用于保存枚举</li>
+<li>set用于保存集合</li>
+</ul>
+</li>
+<li><p>较长的文本：text、blob(较大的二进制)</p>
+</li>
+<li><p>特点</p>
+<table>
+<thead>
+<tr>
+<th align="center">写法</th>
+<th align="center">M的意思</th>
+<th align="center">特点</th>
+<th align="center">空间的耗费</th>
+<th align="center">效率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">char    char(M)</td>
+<td align="center">最大的字符数，可以省略，默认为1</td>
+<td align="center">固定长度的字符</td>
+<td align="center">比较耗费</td>
+<td align="center">高</td>
+</tr>
+<tr>
+<td align="center">varchar    varchar(M)</td>
+<td align="center">最大的字符数，不可以省略</td>
+<td align="center">可变长度的字符</td>
+<td align="center">比较节省</td>
+<td align="center">低</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<blockquote>
+<p>CREATE TABLE tab_char(<br>    c1 ENUM(‘a’,’b’,’c’)<br>);<br>DESC tab_char;<br>/*<br>enum枚举<br>    只能插入给定的字符<br>*/<br>INSERT INTO tab_char VALUES(‘a’);<br>INSERT INTO tab_char VALUES(‘b’);<br>INSERT INTO tab_char VALUES(‘d’);<br>INSERT INTO tab_char VALUES(‘A’);</p>
+<p>SELECT * FROM tab_char;</p>
+<p>CREATE TABLE tab_set(<br>    s1 SET(‘a’,’b’,’c’,’d’)<br>);<br>/*<br>set集合<br>*/<br>DESC tab_set;<br>INSERT INTO tab_set VALUES(‘a’);<br>INSERT INTO tab_set VALUES(‘A,B’);<br>INSERT INTO tab_set VALUES(‘a,c,d’);</p>
+<p>SELECT * FROM tab_set;</p>
+</blockquote>
+<h5 id="日期型"><a href="#日期型" class="headerlink" title="日期型"></a>日期型</h5><ul>
+<li>date       只有日期</li>
+<li>datetime   8字节</li>
+<li>timestamp  4字节  受版本和时区的影响</li>
+<li>time       只保存时间</li>
+<li>year       只保存年</li>
+</ul>
+<blockquote>
+<p>CREATE TABLE tab_date(<br>    t1 DATETIME,<br>    t2 TIMESTAMP<br>);</p>
+<p>INSERT INTO tab_date VALUES(NOW(),NOW());</p>
+<p>SELECT * FROM tab_date;</p>
+<p>SHOW VARIABLES LIKE ‘time_zone’;</p>
+<p>SET time_zone=’+9:00’;</p>
+<p>注意！我的5.7版本不支持timestamp，俺也不明白为什么？</p>
+</blockquote>
+<h4 id="常见的约束"><a href="#常见的约束" class="headerlink" title="常见的约束"></a>常见的约束</h4><h5 id="分类约束"><a href="#分类约束" class="headerlink" title="分类约束"></a>分类约束</h5><p>​    六大约束：<br>​    not null<br>​    default   默认，用于保证该字段有默认值<br>​    primary key  主键，用于保证该字段的值具有唯一性，并且非空<br>​    unique    唯一，用于保证该字段的值具有唯一性，可为空<br>​    check     检查约束（mysql中不支持）<br>​    foreign key  外键，用于限制两个表的关系，用于保证该字段的值必须来自主表的关联列的值<br>​                 在从表中添加外键约束，用于引用主表中某列的值            </p>
+<h5 id="添加约束的时机"><a href="#添加约束的时机" class="headerlink" title="添加约束的时机"></a>添加约束的时机</h5><p>​    1.创建表时<br>​    2.修改表时</p>
+<h5 id="约束的添加分类"><a href="#约束的添加分类" class="headerlink" title="约束的添加分类"></a>约束的添加分类</h5><p>​    列级约束<br>​        六大约束语法上都支持，但外键约束没有效果<br>​    表级约束<br>​        除了非空、默认都支持，列级约束可以在一个字段上追加多个，中间用空格隔开，没有顺序要求        </p>
+<h5 id="主键和唯一键比较"><a href="#主键和唯一键比较" class="headerlink" title="主键和唯一键比较"></a>主键和唯一键比较</h5><table>
+<thead>
+<tr>
+<th></th>
+<th>保证唯一性</th>
+<th>是否允许为空</th>
+<th>一个表中可以有多少个</th>
+<th>是否允许组合</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主键</td>
+<td>√</td>
+<td>×</td>
+<td>至多有1个</td>
+<td>√，但不推荐</td>
+</tr>
+<tr>
+<td>唯一键</td>
+<td>√</td>
+<td>√，也只能有一个</td>
+<td>可以有多个</td>
+<td>√，但不推荐</td>
+</tr>
+</tbody></table>
+<h5 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h5><p>​    1.要求在从表中设置外键关系<br>​    2.从表中的外键列的类型和主表的关联列的类型要求一致或兼容，名称无要求<br>​    3.主表的关联列必须是一个key（一般是主键或者是唯一键）<br>​    4.插入数据时先插入主表，在插入从表<br>​      删除数据时先删除从表，在删除从表</p>
+<blockquote>
+<p>CREATE DATABASE students;</p>
+<p>#一、创建表时添加约束<br>#1.添加列级约束<br>USE students;</p>
+<p>CREATE TABLE stuinfo(<br>    id INT PRIMARY KEY, #主键约束<br>    stuName VARCHAR(20) NOT NULL, #非空<br>    gender CHAR(1) CHECK(gender=’男’ OR gender=’女’), #检查，mysql没有效果哦<br>    seat INT UNIQUE,   #唯一<br>    age INT DEFAULT 18, #默认约束18<br>    majorId INT REFERENCES major(id) #外键</p>
+<p>);</p>
+<p>CREATE TABLE major(<br>    id INT PRIMARY KEY,<br>    majorName VARCHAR(20)<br>);</p>
+<p>SHOW INDEX FROM stuinfo;</p>
+<p>#1.添加表级约束<br>/*<br>语法：<br>    【constraint 约束名】 约束类型（字段名）<br>*/<br>DROP TABLE IF EXISTS stuinfo;<br>CREATE TABLE stuinfo(<br>    id INT,<br>    stuName VARCHAR(20),<br>    gender CHAR(1),<br>    seat INT,<br>    age INT,<br>    majorId INT,</p>
+<pre><code>CONSTRAINT pk PRIMARY KEY(id), 
+CONSTRAINT uq UNIQUE(seat),
+#constraint ck cheak(gender=&#39;男&#39; OR gender=&#39;女&#39;),
+CONSTRAINT fk_stuinfo_major FOREIGN KEY(majorId) REFERENCES major(id)
+</code></pre>
+<p>);</p>
+<p>#通用的写法</p>
+<p>CREATE TABLE stuinfo(<br>    id INT PRIMARY KEY, #主键约束<br>    stuName VARCHAR(20) NOT NULL, #非空<br>    gender CHAR(1) CHECK(gender=’男’ OR gender=’女’), #检查，mysql没有效果哦<br>    seat INT UNIQUE,   #唯一<br>    age INT DEFAULT 18, #默认约束18<br>    majorId INT,</p>
+<pre><code>CONSTRAINT fk_stuinfo_major FOREIGN KEY(majorId) REFERENCES major(id)
+</code></pre>
+<p>);</p>
+<p>#二、修改表示添加约束</p>
+<p>/*<br>语法：<br>    1.添加列级约束<br>    alter table 表名 modify column 字段名 字段类型 新约束;</p>
+<pre><code>2.添加表级约束
+alter table 表名 add 【constraint 约束名】 约束类型（字段名） 【外键的引用】;
+</code></pre>
+<p>*/</p>
+<p>DROP TABLE IF EXISTS stuinfo;<br>CREATE TABLE stuinfo(<br>    id INT,<br>    stuName VARCHAR(20),<br>    gender CHAR(1),<br>    seat INT,<br>    age INT,<br>    majorId INT</p>
+<p>);</p>
+<p>#1.添加非空约束<br>ALTER TABLE stuinfo MODIFY COLUMN stuName VARCHAR(20) NOT NULL;</p>
+<p>#2.添加默认约束<br>ALTER TABLE stuinfo MODIFY COLUMN age INT DEFAULT 18;</p>
+<p>#3.添加主键<br>ALTER TABLE stuinfo MODIFY COLUMN id INT PRIMARY KEY;<br>#—————————————————-<br>ALTER TABLE stuinfo ADD PRIMARY KEY(id);</p>
+<p>#4.添加唯一键<br>ALTER TABLE stuinfo MODIFY COLUMN seat INT UNIQUE;<br>#—————————————————-<br>ALTER TABLE stuinfo ADD UNIQUE(seat);</p>
+<p>#5.添加外键<br>ALTER TABLE stuinfo ADD FOREIGN KEY(magirId) REFERENCES major(id);</p>
+<p>#三、修改表时删除约束<br>#1.删除非空约束<br>ALTER TABLE stuinfo MODIFY COLUMN stuName VARCHAR(20) NULL;</p>
+<p>#2.删除默认约束<br>ALTER TABLE stuinfo MODIFY COLUMN age INT;</p>
+<p>#3.删除主键<br>ALTER TABLE stuinfo MODIFY COLUMN id INT;<br>#—————————————————-<br>ALTER TABLE stuinfo DROP PRIMARY KEY;</p>
+<p>#4.删除唯一键<br>ALTER TABLE stuinfo DROP INDEX seat;</p>
+<p>#5.删除外键<br>ALTER TABLE stuinfo DROP FOREIGN KEY magirId;</p>
+</blockquote>
+<h4 id="标识列"><a href="#标识列" class="headerlink" title="标识列"></a>标识列</h4><p>又称为自增长列<br>不用手动插入值，系统提供默认的序列值</p>
+<p>特点：<br>    1.不用手动插入值，可以自动提供序列值，默认从1开始，步长为1<br>        auto_increment_increment<br>        如果要更改起始值：手动插入值<br>        如果要更改步长：更改系统变量<br>        set auto_increment_increment=值;<br>    2.一个表至多有一个自增长列<br>    3.自增长列只能支持数值型<br>    4.自增长列必须为一个key</p>
+<blockquote>
+<p>#一、创建表时设置标识列<br>CREATE TABLE tab_identity(<br>    id INT PRIMARY KEY AUTO_INCREMENT,<br>    NAME VARCHAR(20)<br>);</p>
+<p>INSERT INTO tab_identity VALUES(NULL,’join’);<br>INSERT INTO tab_identity(id,NAME) VALUES(NULL,’join’);<br>INSERT INTO tab_identity(NAME) VALUES(‘join’);</p>
+<p>SELECT * FROM tab_identity;</p>
+<p>SHOW VARIABLES LIKE ‘%auto_increment%’;</p>
+<p>#设置步长<br>SET auto_increment_increment=3;</p>
+<p>SHOW TABLES;</p>
+<p>#二、修改表时设置标识列<br>ALTER TABLE tab_identity MODIFY COLUMN id INT PRIMARY KEY AUTO_INCREMENT;</p>
+<p>#三、删除标识列<br>ALTER TABLE tab_identity MODIFY COLUMN id INT;</p>
+</blockquote>
+<h3 id="TCL语言"><a href="#TCL语言" class="headerlink" title="TCL语言"></a>TCL语言</h3><p>事务控制语言</p>
+<h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><p>​    一个或者一组SQL语句组成的一个执行单元，这个执行单元要么全部执行，要么全部不执行</p>
+<h4 id="事务的ACID属性"><a href="#事务的ACID属性" class="headerlink" title="事务的ACID属性"></a>事务的ACID属性</h4><p>​    原子性：事务是不可分割的工作单位<br>​    一致性：数据库从一个状态变换到另一个状态<br>​    隔离性：不受其他事务的干扰<br>​    持久性：永久改变</p>
+<h4 id="事务的创建"><a href="#事务的创建" class="headerlink" title="事务的创建"></a>事务的创建</h4><pre><code>隐式事务：事务没有明显的开启和结束的标志
+显式事务：事务具有明显的开启和结束
+前提：必须先设置自动提交功能为禁用
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+步骤1：开启事务
+set autocommit=0;
+start transaction;可选的
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+步骤2：编写事务中的sql语句(select insert update delete)
+语句1;
+语句2;
+...
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+步骤3：结束事务
+commit;提交事务
+rollback;回滚事务
+</code></pre>
+<blockquote>
+<p>SHOW ENGINES;</p>
+<p>CREATE DATABASE test;</p>
+<p>DROP DATABASE test;</p>
+<p>DROP TABLE IF EXISTS ACCOUNT;<br>CREATE TABLE ACCOUNT(<br>    id INT PRIMARY KEY,<br>    username VARCHAR(20),<br>    balance FLOAT<br>);</p>
+<p>INSERT INTO ACCOUNT VALUES(1,’张无忌’,1000);<br>INSERT INTO ACCOUNT VALUES(2,’赵敏’,1000);</p>
+<p>SELECT * FROM ACCOUNT;</p>
+<p>#演示事务使用步骤</p>
+<p>#开启事务<br>SET autocommit=0;<br>START TRANSACTION;<br>#编写一组事务语句<br>UPDATE ACCOUNT SET balance = 1000 WHERE username=’张无忌’;<br>UPDATE ACCOUNT SET balance = 1000 WHERE username=’赵敏’;<br>#结束事务<br>COMMIT;    #rollback;  回滚</p>
+</blockquote>
+<h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><p>1、事务的并发问题是如何发生的？</p>
+<p>多个事务同时操作 同一个数据库的相同数据时</p>
+<p>2、并发问题都有哪些？</p>
+<p>对于同时运行的多个事务, 当这些事务访问数据库中相同的数据时, 如果没有采取必要的隔离机制, 就会导致各种并发问题：<br>脏读：一个事务读取了其他事务还没有提交的数据，读到的是其他事务“更新”的数据；<br>不可重复读：一个事务多次读取，结果不一样；<br>幻读：一个事务读取了其他事务还没有提交的数据，只是读到的是 其他事务“插入”的数据。</p>
+<p>3、如何解决并发问题？</p>
+<p>通过设置隔离级别来解决并发问题</p>
+<p>数据库事务的隔离性: 数据库系统必须具有隔离并发运行各个事务的能力, 使它们不会相互影响, 避免各种并发问题.</p>
+<p>一个事务与其他事务隔离的程度称为隔离级别. 数据库规定了多种事务隔离级别, 不同隔离级别对应不同的干扰程度, 隔离级别越高, 数据一致性就越好, 但并发性越弱</p>
+<p>4、隔离级别</p>
+<img src="D:\blog\source\_posts\隔离级别.png" alt="隔离级别" style="zoom:50%;float:left" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<ul>
+<li><p>每启动一个mysql程序，就会得到一个单独的数据库连接，每一个数据库连接都有一个全局变量@@tx_isolation，表示当前的事务隔离级别</p>
+</li>
+<li><p>查看当前隔离级别  select @@tx_isolation;</p>
+</li>
+<li><p>设置当前mysql连接的隔离级别  set 【session】 transaction level 隔离级别;</p>
+</li>
+<li><p>设置数据库系统的全局的隔离级别  set global transaction level 隔离级别;</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">脏读</th>
+<th align="center">不可重复读</th>
+<th align="center">幻读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">read uncommitted:读未提交</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">read committed：读已提交</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">repeatable read：可重复读</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">serializable：串行化</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="设置节点"><a href="#设置节点" class="headerlink" title="设置节点"></a>设置节点</h4><p>savepoint 节点;</p>
+<blockquote>
+<p>SET autocommit=0;<br>START TRANSACTION;<br>DELETE FROM ACCOUNT WHERE id=1;<br>SAVEPOINT a;  #设置保存点<br>DELETE FROM ACCOUNT WHERE id=2;<br>ROLLBACK TO a; #回滚到保存点</p>
+<p>SELECT * FROM ACCOUNT;</p>
+<p>#delete 和 truncate 在事务使用时的区别<br>#delete可以回滚<br>SET autocommit = 0;<br>START TRANSACTION;<br>DELETE FROM ACCOUNT;<br>ROLLBACK;</p>
+<p>#TRUNCATE没有回滚<br>SET autocommit = 0;<br>START TRANSACTION;<br>TRUNCATE FROM ACCOUNT;<br>ROLLBACK;</p>
+</blockquote>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h4><p>含义：虚拟表，和普通表一样使用<br>            mysql5.1版本出现的新功能，是通过表动态生成的数据</p>
+<p>应用场景</p>
+<ul>
+<li>多个地方用到同样的查询结果</li>
+<li>该查询结果使用的sql语句较复杂</li>
+</ul>
+<p>视图的好处</p>
+<ul>
+<li>重用sql语句</li>
+<li>简化复杂的sql操作，不必知道它的查询细节</li>
+<li>保护数据，提高安全性</li>
+</ul>
+<p>注意：视图一般用于查询的，而不是更新的，所以具备以下特点的视图都不允许更新</p>
+<ul>
+<li>包含以下关键字的sql语句：分组函数、distinct、group by、having、union或者union all</li>
+<li>常量视图</li>
+<li>Select中包含子查询</li>
+<li>join</li>
+<li>from一个不能更新的视图</li>
+<li>where子句的子查询引用了from子句中的表</li>
+</ul>
+<p>视图和表的对比</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>关键字</th>
+<th>是否占用物理空间</th>
+<th>使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>视图</td>
+<td>view</td>
+<td>占用较小，只保存sql逻辑</td>
+<td>一般用于查询</td>
+</tr>
+<tr>
+<td>表</td>
+<td>table</td>
+<td>保存实际的数据</td>
+<td>增删改查</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>#一、创建视图<br>/*<br>语法：<br>    create view 视图名<br>    as<br>    查询语句;    </p>
+<p>*/</p>
+<p>USE myemployees;<br>#1.查询邮箱中包含a字母的员工名、部门名和工种信息</p>
+<p>#①创建<br>CREATE VIEW myv1<br>AS<br>SELECT last_name,<code>department_name</code>,<code>job_title</code><br>FROM employees e<br>JOIN departments d ON e.department_id = d.department_id<br>JOIN jobs j ON j.job_id = e.job_id;</p>
+<p>#②使用<br>SELECT * FROM myv1 WHERE last_name LIKE ‘%a%’;</p>
+<p>#2.查询各部门的平均工资级别</p>
+<p>#创建视图查看每个部门的平均工资<br>CREATE VIEW myv2<br>AS<br>SELECT AVG(salary) ag,department_id<br>FROM employees<br>GROUP BY department_id;</p>
+<p>#使用<br>SELECT myv2.ag,grade_level<br>FROM myv2<br>JOIN job_grades g<br>ON myv2.ag BETWEEN g.lowest_sal AND g.highest_sal;</p>
+<p>#3.查询平均工资最低的部门信息</p>
+<p>SELECT * FROM myv2 ORDER BY ag LIMIT 1;</p>
+<p>#4.查询平均工资最低的部门名和工资</p>
+<p>CREATE VIEW myv3<br>AS<br>SELECT * FROM myv2 ORDER BY ag LIMIT 1;</p>
+<p>SELECT d.*, m.ag<br>FROM myv3 m<br>JOIN departments d<br>ON m.department_id = d.department_id;</p>
+<p>#二、视图的修改<br>/*<br>方式一：<br>create or replace view 视图名</p>
+<p>方式二：<br>alter view 视图名<br>as<br>查询语句;</p>
+<p>*/</p>
+<p>#三、删除视图<br>/*<br>drop view 视图名1，视图名2…..;</p>
+<p>*/</p>
+<p>#四、查看视图<br>DESC myv1;</p>
+<p>SHOW CREATE VIEW myv1;</p>
+<p>#习题<br>#1、创建视图emp_v1，要求查询电话号码以011开头的员工姓名和工资、邮箱<br>CREATE OR REPLACE VIEW emp_v1<br>AS<br>SELECT last_name,salary,email<br>FROM employees<br>WHERE <code>phone_number</code> LIKE ‘011%’;</p>
+<p>SELECT * FROM emp_v1;</p>
+<p>#2、创建视图emp_v2，要求查询部门的最高工资高于12000的部门信息<br>CREATE OR REPLACE VIEW emp_v2<br>AS<br>SELECT MAX(salary) mx_dep,department_id<br>FROM employees<br>GROUP BY department_id<br>HAVING MAX(salary) &gt; 12000;</p>
+<p>SELECT d.*,mx_dep<br>FROM departments d<br>JOIN emp_v2 e<br>ON e.department_id = d.department_id;</p>
+<p>#五、视图的更新<br>CREATE OR REPLACE VIEW myv1<br>AS<br>SELECT last_name,email<br>FROM employees;</p>
+<p>SELECT * FROM myv1;<br>SELECT * FROM employees;<br>#1.插入<br>INSERT INTO myv1 VALUES(‘张飞’,‘<a href="mailto:&#x7a;&#x68;&#97;&#x6e;&#103;&#102;&#101;&#105;&#64;&#x71;&#113;&#x2e;&#x63;&#x6f;&#x6d;">&#x7a;&#x68;&#97;&#x6e;&#103;&#102;&#101;&#105;&#64;&#x71;&#113;&#x2e;&#x63;&#x6f;&#x6d;</a>‘);<br>#2.修改<br>UPDATE myv1 SET last_name = ‘张无忌’ WHERE last_name = ‘张飞’;<br>#3.删除<br>DELETE FROM myv1 WHERE last_name = ‘张无忌’;</p>
+</blockquote>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>系统变量（由系统提供，属于服务器层面）</p>
+<pre><code>全局变量
+    作用域：服务器每次启动都会赋初值，针对所有连接有效，但不能跨重启
+会话变量
+    作用域：针对当前连接有效
+</code></pre>
+<p>自定义变量</p>
+<pre><code>用户变量
+局部变量
+</code></pre>
+<h5 id="系统变量"><a href="#系统变量" class="headerlink" title="系统变量"></a>系统变量</h5><ul>
+<li><p>查看所有系统变量</p>
+<pre><code>show global|【session】 variables;
+</code></pre>
+</li>
+<li><p>查看满足条件的部分系统变量</p>
+<pre><code>show global|【session】 variables like &#39;%char%&#39;;
+</code></pre>
+</li>
+<li><p>查看指定的系统变量的值</p>
+<pre><code>select @@global|【session】.系统变量名;
+</code></pre>
+</li>
+<li><p>为某个系统变量赋值</p>
+<pre><code>set global|【session】 系统变量名=值;
+set @@global|【session】.系统变量名=值;
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>SHOW GLOBAL VARIABLES;<br>SHOW GLOBAL VARIABLES LIKE ‘%char%’;<br>SELECT @@global.autocommit;  #自动提交的功能是打开的<br>SELECT @@tx_isolation;</p>
+</blockquote>
+<h5 id="自定义变量"><a href="#自定义变量" class="headerlink" title="自定义变量"></a>自定义变量</h5><p>声明<br>赋值<br>使用</p>
+<p>用户变量：针对于当前会话（连接）有效</p>
+<pre><code>声明并初始化
+    set @用户变量名=值;
+    set @用户变量名：=值;
+    select @用户变量名：=值;
+
+赋值（更新用户变量的值）
+    set @用户变量名=值;
+    set @用户变量名：=值;
+    select @用户变量名：=值;
+    
+    select 字段 into 变量名
+    from 表;
+使用(查看用户变量名）
+    select @用户变量名;
+</code></pre>
+<p>局部变量：仅仅在定义它的begin and中有效,只能放在begin and中的第一句话！<br>    声明并初始化<br>        declare 变量名 类型;<br>        declare 变量名 类型 default 值;</p>
+<pre><code>赋值（更新用户变量的值）
+    set 局部变量名=值;
+    set 局部变量名：=值;
+    select @局部变量名：=值;
+    
+    select 字段 into 局部变量名
+    from 表;
+使用(查看用户变量名）
+    select 局部变量名;
+</code></pre>
+<blockquote>
+<p>SET @name = ‘john’;<br>SET @name = 200;<br>SET @count = 1;</p>
+<p>SELECT COUNT(*) INTO @count</p>
+<p>#案例：声明两个变量名并赋初值，求和并打印</p>
+<p>#用户变量<br>SET @m=1;<br>SET @n=2;<br>SET @sum = @m + @n;<br>SELECT @sum;</p>
+<p>#局部变量<br>DECLARE m INT DEFAULT 1;<br>DECLARE n INT DEFAULT 2;<br>DECLARE SUM INT;<br>SET SUM = m + n;<br>SELECT SUM;</p>
+</blockquote>
+<h4 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h4><h5 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h5><ul>
+<li><p>语法</p>
+<p>create procedure 存储过程名（参数列表）<br>begin</p>
+<pre><code>存储过程体（一组合法的SQL语句）
+</code></pre>
+<p>end</p>
+<p>1、参数列表包括三部分<br>参数模式  参数名  参数类型</p>
+<p>参数模式：in 该参数可作为输入，调用方传入值</p>
+<pre><code>out  该参数可作为输出，可做返回值
+inout 既可以输入又可以输出，也就是既需要传入值，又可做返回值
+</code></pre>
+<p>2、存储体只有一句话，begin and可省略</p>
+<p>3、存储过程体每条SQL语句要求必须加分号，存储过程的结尾可以使用delimiter重新设置</p>
+</li>
+<li><p>delimiter 结束标记</p>
+<p>例：delimiter $</p>
+</li>
+</ul>
+<h5 id="调用语法"><a href="#调用语法" class="headerlink" title="调用语法"></a>调用语法</h5><p>CALL 存储过程名（实参列表）;</p>
+<blockquote>
+<p>#1.空参列表<br>USE girls;<br>#案例：插入admin表中五条记录<br>SELECT * FROM admin;</p>
+<p>DELIMITER $<br>CREATE PROCEDURE myp1()<br>BEGIN<br>    INSERT INTO admin(<code>username</code>,<code>password</code>)<br>    VALUES(‘john’,’0000’),(‘lily’,’0001’),(‘rose’,’0002’),(‘jack’,’0003’),(‘tom’,’0004’);<br>END $    </p>
+<p>CALL myp1()$</p>
+<p>#2.创建in模式参数的存储过程<br>#案例1.创建存储过程实现 根据女神名，查询对应男神信息<br>DELIMITER $<br>CREATE PROCEDURE myp2(IN beautyName VARCHAR(20))<br>BEGIN<br>    SELECT bo.*<br>    FROM boys bo<br>    RIGHT JOIN beauty b<br>    ON bo.id = b.boyfriend_id<br>    WHERE b.name = beautyName;<br>END $    </p>
+<p>CALL myp2(‘关晓彤’)$</p>
+<p>#案例2.创建存储过程实现，用户是否登录成功<br>CREATE PROCEDURE myp3(IN usern VARCHAR(20),IN passwd VARCHAR(20))<br>BEGIN<br>    DECLARE result INT DEFAULT 0;<br>    SELECT COUNT(*) INTO result;<br>    FROM admin a<br>    WHERE a.<code>username</code> = usern AND a.<code>password</code> = passwd;<br>    SELECT IF (result&gt;0,’成功’,’失败’);<br>END $</p>
+<p>CALL myp3(‘john’,’2222’)$</p>
+<p>#3.创建out模式参数的存储过程</p>
+<p>#案例1.根据女神名，返回对应的男生名<br>CREATE PROCEDURE myp4(IN beautyName VARCHAR(20), OUT boyName VARCHAR(20))<br>BEGIN<br>    SELECT bo.boyName INTO boyName<br>    FROM boys bo<br>    INNER JOIN beauty b<br>    ON bo.id = b.boyfriend_id<br>    WHERE b.name  = beautyName;<br>END $</p>
+<p>CALL myp4(‘关晓彤’,@bName)$<br>SELECT @bName$</p>
+<p>#案例2.根据女神名，返回男神名和魅力值<br>CREATE PROCEDURE myp5(IN beautyName VARCHAR(20), OUT boyName VARCHAR(20), OUT userCP INT)<br>BEGIN<br>    SELECT bo.boyName, bo.userCP INTO boyName,userCP<br>    FROM boys bo<br>    INNER JOIN beauty b<br>    ON bo.id = b.boyfriend_id<br>    WHERE b.name  = beautyName;<br>END $</p>
+<p>CALL myp5(‘关晓彤’,@bName,@usercp)$<br>SELECT @bName,@usercp$</p>
+<p>#3.创建inout模式参数的存储过程<br>#案例1.传入a和b两个值，a和b翻倍返回<br>CREATE PROCEDURE myp6(INOUT a INT ,INOUT b INT)<br>BEGIN<br>    SET a=a * 2;<br>    SET b=b * 2;<br>END $</p>
+<p>SET @m=10$<br>SET @n=20$<br>CALL myp6(@m,@n)$<br>SELECT @m,@n$</p>
+</blockquote>
+<h5 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h5><p>DROP PROCEDURE 存储过程名;</p>
+<blockquote>
+<p>DROP PROCEDURE myp3;</p>
+</blockquote>
+<h5 id="查看存储过程"><a href="#查看存储过程" class="headerlink" title="查看存储过程"></a>查看存储过程</h5><blockquote>
+<p>SHOW CREATE PROCEDURE myp1;</p>
+</blockquote>
+<blockquote>
+<p>#习题<br>#创建存储过程或函数实现传入一个日期，格式化年月日返回</p>
+<p>CREATE PROCEDURE test_pro(IN mydate DATETIME,OUT strDate VARCHAR(50))<br>BEGIN<br>    SELECT DATE_FORMAT(mydate,’%y年%m月%d日’) INTO strDate;<br>END $<br>CALL test_pro(NOW(),@str) $<br>SELECT @str $</p>
+<p>#创建存储过程或者函数实现传入女神名称，返回 女神 and 男神<br>INSERT INTO beauty(<code>name</code>,<code>phone</code>,<code>boyfriend_id</code>) VALUES(‘王gj’,’123456789’,3);<br>SELECT * FROM beauty;</p>
+<p>CREATE PROCEDURE test_pro1(IN beautyName VARCHAR(20), OUT str VARCHAR(20))<br>BEGIN<br>    SELECT CONCAT(beautyName,’ and ‘,boyName) INTO str<br>    FROM boys bo<br>    RIGHT JOIN beauty b<br>    ON bo.id = b.boyfriend_id<br>    WHERE b.name  = beautyName;<br>END $</p>
+<p>CALL test_pro1(‘王gj’,@str)$<br>SELECT @str $</p>
+<p>#————————————————————————-<br>CREATE PROCEDURE test_pro2(IN beautyName VARCHAR(20), OUT str VARCHAR(20))<br>BEGIN<br>    SELECT CONCAT(beautyName,’ and ‘,IFNULL(boyName,’null’)) INTO str<br>    FROM boys bo<br>    RIGHT JOIN beauty b<br>    ON bo.id = b.boyfriend_id<br>    WHERE b.name  = beautyName;<br>END $</p>
+<p>CALL test_pro2(‘王语嫣’,@str)$<br>SELECT @str $</p>
+<p>#创建存储过程或者函数，根据传入的条目数和起始索引，查询beauty表的记录<br>CREATE PROCEDURE test_pro3(IN size INT,IN startIndex INT)<br>BEGIN<br>    SELECT * FROM beauty LIMIT startIndex,size;<br>END $<br>CALL test_pro3(1,2)$</p>
+</blockquote>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><ul>
+<li><p>含义：一组预先编译好的SQL语句的集合，理解成批处理语句</p>
+</li>
+<li><p>优点</p>
+<p>1.提高代码的重用性<br>2.简化操作<br>3.减少了编译次数并且减少了和数据库服务器的连接次数，提高效率</p>
+</li>
+<li><p>和存储过程的区别</p>
+<pre><code>存储过程：可以有0或多个返回，适合做批量插入，批量更新
+函数：有且仅有1个返回，适合做处理数据后返回一个结果
+</code></pre>
+</li>
+</ul>
+<h5 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h5><p>CREATE FUNCTION 函数名（参数列表） RETURNS 返回类型<br>BEGIN<br>    函数体<br>END</p>
+<h5 id="调用语法-1"><a href="#调用语法-1" class="headerlink" title="调用语法"></a>调用语法</h5><p>SELECT 函数名（参数列表） 执行语句并返回值</p>
+<blockquote>
+<p>#1.无参有返回<br>#案例：返回员工数<br>CREATE FUNCTION myf1() RETURNS INT<br>BEGIN<br>    DECLARE c INT DEFAULT 0;<br>    SELECT COUNT(*) INTO c<br>    FROM <code>employees</code>;<br>    RETURN c;<br>END $</p>
+<p>SELECT myf1()$</p>
+<p>#2.有参有返回<br>#案例1.根据员工名，返回他们的工资<br>CREATE FUNCTION myf2(empName VARCHAR(20)) RETURNS DOUBLE<br>BEGIN<br>    SET @sal=0;<br>    SELECT salary INTO @sal<br>    FROM <code>employees</code><br>    WHERE last_name = empName;<br>    RETURN @sal;<br>END $<br>SELECT myf2(‘kochher’) $</p>
+<p>#案例2.根据部门名返回部门的平均工资<br>CREATE FUNCTION myf3(deptName VARCHAR(20)) RETURNS DOUBLE<br>BEGIN<br>     DECLARE sal DOUBLE;<br>     SELECT AVG(salary) INTO sal<br>     FROM <code>employees</code> e<br>     JOIN <code>departments</code> d<br>     ON e.<code>department_id</code> = d.<code>department_id</code><br>     WHERE d.<code>department_name</code> = deptName;<br>     RETURN sal;<br>END $<br>SELECT myf3(‘IT’) $     </p>
+</blockquote>
+<h5 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h5><blockquote>
+<p>SHOW CREATE FUNCTION myf3;</p>
+</blockquote>
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><blockquote>
+<p>DROP FUNCTION myf2;</p>
+</blockquote>
+<blockquote>
+<p>#创建函数，实现传入两个float，返回两者之和<br>CREATE FUNCTION test_fun1(num1 FLOAT,num2 FLOAT) RETURNS FLOAT<br>BEGIN<br>    SET @sum = 0;<br>    SET @sum = num1 + num2;<br>    RETURN @sum;<br>END $<br>SELECT test_fun1(1,2)$</p>
+</blockquote>
+<h4 id="流程控制函数"><a href="#流程控制函数" class="headerlink" title="流程控制函数"></a>流程控制函数</h4><p>顺序<br>分支<br>循环</p>
+<h5 id="分支函数"><a href="#分支函数" class="headerlink" title="分支函数"></a>分支函数</h5><blockquote>
+<p>#1.if函数<br>SELECT IF （表达式1，表达式2，表达式3）</p>
+<p>如果1成立，则返回2，否则返回3</p>
+<p>#2.case结构</p>
+<p>#switch语句，一般用于实现等值判断<br>CASE 变量|表达式|字段<br>WHEN 要判断的值 THEN 返回的值1或语句1 ;<br>WHEN 要判断的值 THEN 返回的值2或语句2 ;<br>…<br>ELSE 要返回的值n或语句n ;<br>END CASE;</p>
+<p>#多重if，一般用于实现区间判断<br>CASE<br>WHEN 要判断的条件1 THEN 返回的值1或语句1 ;<br>WHEN 要判断的条件2 THEN 返回的值2或语句2 ;<br>…<br>ELSE 要返回的值n或语句n ;<br>END CASE;</p>
+<p>特点：<br>    可做表达式，嵌套在其他语句中使用，可以放在任何地方， BEGIN END 中或者外<br>    可做独立的语句，只能放在 BEGIN AND 中</p>
+<p>#案例.创建存储过程，根据传入的成绩，来显示等级<br>CREATE PROCEDURE test_case(IN score INT)<br>BEGIN<br>     CASE<br>     WHEN score &gt;= 90 AND score&lt;=100 THEN SELECT ‘A’;<br>     WHEN score &gt;= 80 THEN SELECT ‘B’;<br>     WHEN score &gt;= 70 THEN SELECT ‘C’;<br>     ELSE SELECT ‘D’;<br>     END CASE;<br>END $<br>CALL test_case(99) $</p>
+<p>#3.if结构,只能用于begin and中<br>IF 条件1 THEN 语句1 ;<br>ELSEIF 条件2 THEN 语句2 ;<br>…<br>【else 语句n ;】<br>END IF ;</p>
+<p>CREATE FUNCTION test_if(score INT) RETURNS CHAR<br>BEGIN<br>    IF score&gt;=90 AND score&lt;=100 THEN RETURN ‘A’;<br>    ELSEIF score&gt;80 THEN RETURN ‘B’;<br>    ELSEIF score&gt;70 THEN RETURN ‘C’;<br>    ELSE RETURN ‘D’;<br>    END IF;<br>END $</p>
+<p>SELECT test_if(89)$</p>
+</blockquote>
+<h5 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h5><ul>
+<li><p>分类<br>while<br>loop<br>repeat</p>
+</li>
+<li><p>循环控制<br>iterate类似于continue<br>leave类似于break</p>
+</li>
+</ul>
+<blockquote>
+<p>#1.while<br>【标签：】 WHILE 循环条件 DO<br>    循环体;<br>END WHILE 【 标签】;</p>
+<p>#1.loop,可以用来模拟简单的死循环，至少执行一次<br>【标签：】 LOOP<br>    循环体;<br>END LOOP 【 标签】;</p>
+<p>#1.repeat，至少执行一次<br>【标签：】 REPEAT<br>    循环体;<br>UNTIL 结束循环的条件<br>END REPEAT 【 标签】;</p>
+<p>#1.没有添加循环控制语句<br>#案例:批量输入，根据次数插入到admin表中多条记录<br>DELIMITER $<br>CREATE PROCEDURE pro_while1(IN insertCount INT)<br>BEGIN<br>    DECLARE i INT DEFAULT 1;<br>    WHILE i&lt;=insertCount DO<br>        INSERT INTO admin(username,<code>password</code>) VALUES(CONCAT(‘Rose’,i),’666’);<br>        SET i=i+1;<br>    END WHILE;<br>END $</p>
+<p>CALL pro_while1(100) $</p>
+<p>#2.添加leave语句<br>#案例:批量输入，根据次数插入到admin表中多条记录，次数大于20则停止<br>TRUNCATE TABLE admin $<br>CREATE PROCEDURE pro_while2(IN insertCount INT)<br>BEGIN<br>    DECLARE i INT DEFAULT 1;<br>    a:WHILE i&lt;=insertCount DO<br>        INSERT INTO admin(username,<code>password</code>) VALUES(CONCAT(‘Rose’,i),’666’);<br>        IF i&gt;=20 THEN LEAVE a;<br>        END IF;<br>        SET i=i+1;<br>    END WHILE a;<br>END $</p>
+<p>CALL pro_while2(100) $</p>
+<p>#3.添加ITERATE语句<br>#案例:批量输入，根据次数插入到admin表中多条记录，只插入偶数次<br>TRUNCATE TABLE admin $<br>CREATE PROCEDURE pro_while3(IN insertCount INT)<br>BEGIN<br>    DECLARE i INT DEFAULT 0;<br>    a:WHILE i&lt;=insertCount DO<br>        SET i=i+1;<br>        IF MOD(i,2)!=0 THEN ITERATE a;<br>        END IF;</p>
+<p>​        INSERT INTO admin(username,<code>password</code>) VALUES(CONCAT(‘Rose’,i),’666’);<br>​    END WHILE a;    </p>
+<p>END $</p>
+<p>CALL pro_while3(100) $    </p>
+</blockquote>
+<blockquote>
+<p>#经典案例讲解<br>/*<br>已知表stringcontent<br>其中字段  id 自增长<br>      content varchar(20)<br>向表中插入指定个数，随机字符串</p>
+<p>*/</p>
+<p>USE test;<br>DROP TABLE IF EXISTS stringcontent;<br>CREATE TABLE stringcontent(<br>    id INT PRIMARY KEY AUTO_INCREMENT,<br>    content VARCHAR(20)<br>);</p>
+<p>DELIMITER $<br>CREATE PROCEDURE test_randstr_insert(IN insertCount INT)<br>BEGIN<br>    DECLARE i INT DEFAULT 1;<br>    DECLARE str VARCHAR(26) DEFAULT ‘abcdefghijklmnopqrstuvwxyz’;<br>    DECLARE startIndex INT DEFAULT 1; #起始索引<br>    DECLARE len INT DEFAULT 1;#截取字符串长度<br>    WHILE i&lt;=insertCount DO<br>        SET startIndex=FLOOR(RAND() * 26+1);#起始索引  floor()向下取整  rand()产生0-1的随机数<br>        SET len=FLOOR(RAND() * (20-startIndex+1)+1);#产生一个随机整数，代表截取长度，1-（26-startIndex+1） 最长字符为20<br>        INSERT INTO stringcontent(content) VALUES(SUBSTR(str,startIndex,len));<br>        SET i=i+1;<br>    END WHILE;<br>END $<br>CALL test_randstr_insert(10)$<br>SELECT * FROM stringcontent $</p>
+</blockquote>
 
       
 
@@ -251,23 +1334,7 @@
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
       
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -318,7 +1385,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://dongshuyan.github.io/021/09/06/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://dongshuyan.github.io/021/10/03/%E6%88%91%E7%9A%84MySQL%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,15 +1399,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/09/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我的第一篇博客文章
-        
-      </div>
-    </a>
   
+    <a href="/2021/09/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -365,7 +1428,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84MySQL%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85"><span class="toc-number">1.</span> <span class="toc-text">我的MySQL的学习之旅</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9D%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text">数据库初识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6%E4%B9%A0%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.1.1.</span> <span class="toc-text">为什么学习数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.2.</span> <span class="toc-text">数据库的相关概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2MySQL%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.1.3.</span> <span class="toc-text">启动和停止MySQL服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MySQL%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%99%BB%E5%BD%95%E5%92%8C%E9%80%80%E5%87%BA"><span class="toc-number">1.1.4.</span> <span class="toc-text">MySQL服务端的登录和退出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MySQL%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.5.</span> <span class="toc-text">MySQL常见命令介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MySQL%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-number">1.1.6.</span> <span class="toc-text">MySQL的语法规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E8%AF%AD%E8%A8%80%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.7.</span> <span class="toc-text">SQL语言的分类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DQL%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.</span> <span class="toc-text">DQL语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.1.</span> <span class="toc-text">基础查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.2.</span> <span class="toc-text">条件查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.3.</span> <span class="toc-text">排序查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.4.</span> <span class="toc-text">常见函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">单行函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">分组函数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.5.</span> <span class="toc-text">分组查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.6.</span> <span class="toc-text">连接查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.7.</span> <span class="toc-text">子查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.8.</span> <span class="toc-text">分页查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.2.9.</span> <span class="toc-text">联合查询</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DML%E8%AF%AD%E8%A8%80"><span class="toc-number">1.3.</span> <span class="toc-text">DML语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.1.</span> <span class="toc-text">插入语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.2.</span> <span class="toc-text">修改语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.3.</span> <span class="toc-text">删除语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DDL%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.</span> <span class="toc-text">DDL语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%93%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.1.</span> <span class="toc-text">库的管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">表的管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.3.</span> <span class="toc-text">常见的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%9E%8B"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">数值型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">字符型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E5%9E%8B"><span class="toc-number">1.4.3.3.</span> <span class="toc-text">日期型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.4.4.</span> <span class="toc-text">常见的约束</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">分类约束</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%97%B6%E6%9C%BA"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">添加约束的时机</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB"><span class="toc-number">1.4.4.3.</span> <span class="toc-text">约束的添加分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E9%94%AE%E5%92%8C%E5%94%AF%E4%B8%80%E9%94%AE%E6%AF%94%E8%BE%83"><span class="toc-number">1.4.4.4.</span> <span class="toc-text">主键和唯一键比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%96%E9%94%AE"><span class="toc-number">1.4.4.5.</span> <span class="toc-text">外键</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E5%88%97"><span class="toc-number">1.4.5.</span> <span class="toc-text">标识列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCL%E8%AF%AD%E8%A8%80"><span class="toc-number">1.5.</span> <span class="toc-text">TCL语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-number">1.5.1.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%9A%84ACID%E5%B1%9E%E6%80%A7"><span class="toc-number">1.5.2.</span> <span class="toc-text">事务的ACID属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.5.3.</span> <span class="toc-text">事务的创建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">1.5.4.</span> <span class="toc-text">事务的隔离级别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%8A%82%E7%82%B9"><span class="toc-number">1.5.5.</span> <span class="toc-text">设置节点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">1.6.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE"><span class="toc-number">1.6.1.</span> <span class="toc-text">视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.2.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">系统变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">自定义变量</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="toc-number">1.6.3.</span> <span class="toc-text">存储过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E8%AF%AD%E6%B3%95"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">调用语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="toc-number">1.6.3.3.</span> <span class="toc-text">删除存储过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="toc-number">1.6.3.4.</span> <span class="toc-text">查看存储过程</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.4.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-1"><span class="toc-number">1.6.4.1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E8%AF%AD%E6%B3%95-1"><span class="toc-number">1.6.4.2.</span> <span class="toc-text">调用语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.6.4.3.</span> <span class="toc-text">查看</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">1.6.4.4.</span> <span class="toc-text">删除</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.5.</span> <span class="toc-text">流程控制函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.5.1.</span> <span class="toc-text">分支函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.6.5.2.</span> <span class="toc-text">循环结构</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
