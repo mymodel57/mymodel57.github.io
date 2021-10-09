@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="d:/blog/source/_posts/隔离级别.png">
 <meta property="article:published_time" content="2021-10-04T08:14:00.000Z">
-<meta property="article:modified_time" content="2021-10-04T08:45:52.755Z">
+<meta property="article:modified_time" content="2021-10-09T08:27:39.749Z">
 <meta property="article:author" content="mymodel57">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="d:/blog/source/_posts/隔离级别.png">
@@ -387,9 +387,8 @@
 <p>#做一个查询<br>SELECT CONCAT(last_name,’ earns ‘,salary,’ monthly but wants ‘,salary*3) AS ‘ Dream Salary’<br>FROM employees;</p>
 </blockquote>
 <h5 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a>分组函数</h5><ul>
-<li><p>用途</p>
-<pre><code>用做统计使用，又称为聚合函数、统计函数、组函数
-</code></pre>
+<li><p>用途    </p>
+<p>​    用作统计使用，又称为聚合函数、统计函数、组函数</p>
 </li>
 <li><p>分类</p>
 <p>​    sum 求和、avg 平均值、max 最大值、min最小值count 计算个数</p>
@@ -421,7 +420,7 @@
 <p>SELECT SUM(DISTINCT salary),SUM(salary) FROM employees;</p>
 <p>SELECT COUNT(DISTINCT salary),COUNT(salary) FROM employees;</p>
 <p>#5.count函数详解</p>
-<p>SELECT COUNT(salary) FROM employees;<br>SELECT COUNT(<em>) FROM employees;<br>SELECT COUNT(1) FROM employees;<br>/</em><br>效率上：<br>MyISAM存储引擎，count(<em>)最高<br>InnoDB存储引擎，count(</em>)和count(1)效率&gt;count(字段)<br>*/</p>
+<p>SELECT COUNT(salary) FROM employees;<br>SELECT COUNT( * ) FROM employees;<br>SELECT COUNT(1) FROM employees;<br>/*<br>效率上：<br>MyISAM存储引擎，count( * )最高<br>InnoDB存储引擎，count(*)和count(1)效率&gt;count(字段)<br>*/</p>
 <p>#6.和分组函数一同查询的字段有限制</p>
 <p>SELECT AVG(salary),employee_id FROM employees;</p>
 <p>#课后题<br>#1.查询员工表中最大入职时间和最小入职时间的相差天数<br>MAX(hiredate) MIN(hiredate)</p>
@@ -483,12 +482,10 @@
 </blockquote>
 <h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><ul>
 <li><p>多表查询</p>
-<pre><code>查询的字段来自多个表
-</code></pre>
+<p>​    查询的字段来自多个表<br>​    </p>
 </li>
 <li><p>笛卡尔乘积现象</p>
-<pre><code>表1：m行  表2：n行  结果m*n行
-</code></pre>
+<p>​    表1 m行  标2 n行  结果m*n行<br>​    </p>
 </li>
 <li><p>分类</p>
 <blockquote>
@@ -508,7 +505,7 @@
 <p>#案例2.查询城市名中第二个字符为o的部门名和城市名<br>SELECT <code>department_name</code>,<code>city</code><br>FROM <code>departments</code> d,<code>locations</code> l<br>WHERE d.<code>location_id</code>=l.<code>location_id</code><br>AND city LIKE ‘_o%’;</p>
 <p>#可以加分组<br>#案例1.查询每个城市的部门个数<br>SELECT COUNT(*) 个数,city<br>FROM <code>departments</code> d,<code>locations</code> l<br>WHERE d.<code>location_id</code>=l.<code>location_id</code><br>GROUP BY city;</p>
 <p>#案例2.查询有奖金的每个部门的部门号和部门的领导编号和该部门的最低工资<br>SELECT <code>department_name</code>,d.<code>manager_id</code>,MIN(salary)<br>FROM <code>departments</code> d,<code>employees</code> e<br>WHERE d.<code>department_id</code>=e.<code>department_id</code><br>AND <code>commission_pct</code> IS NOT NULL<br>GROUP BY <code>department_name</code>,d.<code>manager_id</code>;</p>
-<p>#可以加排序<br>#案例1.查询每个工种的工种名和员工的个数，并且按员工个数降序<br>SELECT <code>job_title</code>,COUNT(<em>)<br>FROM <code>employees</code> e,<code>jobs</code> j<br>WHERE e.<code>job_id</code>=j.<code>job_id</code><br>GROUP BY <code>job_title</code><br>ORDER BY COUNT(</em>) DESC;</p>
+<p>#可以加排序<br>#案例1.查询每个工种的工种名和员工的个数，并且按员工个数降序<br>SELECT <code>job_title</code>,COUNT(*)<br>FROM <code>employees</code> e,<code>jobs</code> j<br>WHERE e.<code>job_id</code>=j.<code>job_id</code><br>GROUP BY <code>job_title</code><br>ORDER BY COUNT( * ) DESC;</p>
 <p>#可以三表连接<br>#查询员工名，部门名和所在城市<br>SELECT last_name,department_name,city<br>FROM employees e,departments d,locations l<br>WHERE e.department_id = d.department_id<br>AND d.location_id = l.location_id;</p>
 <p>CREATE TABLE job_grades<br>(grade_level VARCHAR(3),<br>lowest_sal  INT,<br>highest_sal INT);</p>
 <p>INSERT INTO job_grades<br>VALUES (‘A’, 1000, 2999);</p>
@@ -523,30 +520,16 @@
 <ul>
 <li><p>sql99语法</p>
 <p>语法：</p>
-<pre><code>select 查询列表
-from 表1 别名 【连接类型】
-join 表2 别名
-on 连接条件
-【where筛选条件】
-【group by 分组】
-【having 筛选条件】
-【order by 排序列表】
-</code></pre>
+<p>​    select 查询列表<br>​    from 表1 别名 【连接类型】<br>​    join 表2 别名<br>​    on 连接条件<br>​    【where筛选条件】<br>​    【group by 分组】<br>​    【having 筛选条件】<br>​    【order by 排序列表】</p>
 <p>分类：</p>
-<pre><code>内连接：inner
-外连接：
-    左外连接 left 【outer】
-    右外连接 right 【outer】
-    全外连接 full 【outer】
-交叉连接：cross
-</code></pre>
+<p>​    内连接：inner<br>​    外连接：<br>​        左外连接 left 【outer】<br>​        右外连接 right 【outer】<br>​        全外连接 full 【outer】<br>​    交叉连接：cross    </p>
 </li>
 </ul>
 <blockquote>
 <p>#一）内连接<br>#1.等值连接<br>#案例1.查询员工名、部门名<br>SELECT last_name,department_name<br>FROM <code>departments</code> d<br>INNER JOIN <code>employees</code> e<br>ON e.<code>department_id</code>=d.<code>department_id</code>;</p>
 <p>#案例2.查询名字中包含a的员工名和工种名<br>SELECT last_name,<code>job_title</code><br>FROM <code>employees</code> e<br>INNER JOIN <code>jobs</code> j<br>WHERE e.<code>last_name</code> LIKE ‘%e%’;</p>
 <p>#案例3.查询部门个数&gt;3的城市名和部门个数<br>SELECT city,COUNT( * ) 部门个数<br>FROM <code>departments</code> d<br>INNER JOIN <code>locations</code> l<br>ON d.<code>location_id</code>=l.<code>location_id</code><br>GROUP BY city<br>HAVING COUNT( * )&gt;3;</p>
-<p>#案例4.查询哪个部门的员工个数&gt;3的部门名和员工个数，并按个数降序<br>SELECT COUNT( * ) 个数,<code>department_name</code><br>FROM <code>employees</code> e<br>INNER JOIN <code>departments</code> d<br>ON e.<code>department_id</code>=d.<code>department_id</code><br>GROUP BY <code>department_name</code><br>HAVING COUNT(  *)&gt;3<br>ORDER BY COUNT( * ) DESC;</p>
+<p>#案例4.查询哪个部门的员工个数&gt;3的部门名和员工个数，并按个数降序<br>SELECT COUNT( * ) 个数,<code>department_name</code><br>FROM <code>employees</code> e<br>INNER JOIN <code>departments</code> d<br>ON e.<code>department_id</code>=d.<code>department_id</code><br>GROUP BY <code>department_name</code><br>HAVING COUNT(  * )&gt;3<br>ORDER BY COUNT( * ) DESC;</p>
 <p>#案例5.查询员工名、工种名、并按部门名降序<br>SELECT last_name,<code>department_name</code>,<code>job_title</code><br>FROM <code>employees</code> e<br>INNER JOIN <code>departments</code> d ON e.<code>department_id</code>=d.<code>department_id</code><br>INNER JOIN <code>jobs</code> j ON e.<code>job_id</code>=j.<code>job_id</code><br>ORDER BY <code>department_name</code> DESC;</p>
 <p>#2.非等值连接<br>#案例1.查询员工工资级别<br>SELECT salary,grade_level<br>FROM <code>employees</code> e<br>JOIN <code>job_grades</code> j<br>ON e.salary BETWEEN j.<code>lowest_sal</code> AND j.<code>highest_sal</code>;</p>
 <p>#案例2.查询每个工资级别的个数&gt;20，并且按工资级别降序<br>SELECT COUNT( * ),grade_level<br>FROM <code>employees</code> e<br>JOIN <code>job_grades</code> j<br>ON e.salary BETWEEN j.<code>lowest_sal</code> AND j.<code>highest_sal</code><br>GROUP BY grade_level<br>HAVING COUNT( * ) &gt; 20<br>ORDER BY grade_level DESC;</p>
@@ -564,13 +547,12 @@ on 连接条件
 <p>#3.查询部门名为SAL或IT的员工信息<br>SELECT e.*,d.<code>department_name</code><br>FROM <code>departments</code> d<br>LEFT OUTER JOIN <code>employees</code> e<br>ON d.<code>department_id</code>=e.<code>department_id</code><br>WHERE d.<code>department_name</code> IN(‘SAL’, ‘IT’);</p>
 </blockquote>
 <h4 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a><strong>子查询</strong></h4><ul>
-<li><p>含义</p>
-<pre><code>出现在其他语句中的select语句，称为子查询或内查询
+<li>含义<pre><code>出现在其他语句中的select语句，称为子查询或内查询
 外部的查询语句，称为主查询或外查询
 </code></pre>
 </li>
-<li><p>分类<br>按子查询出现的位置：</p>
-<pre><code>select后
+<li>分类<ul>
+<li>按子查询出现的位置：<pre><code>select后
     仅仅支持标量子查询
 from后
     支持表子查询
@@ -582,12 +564,14 @@ exists后（相关子查询）
     表子查询
     
 </code></pre>
-<p>按结果集的行列数不同：</p>
-<pre><code>标量子查询（结果集一行一列）
+</li>
+<li>按结果集的行列数不同：<pre><code>标量子查询（结果集一行一列）
 列子查询（一列多行）
 行子查询（一行多列）
 表子查询（一般为多行多列）
 </code></pre>
+</li>
+</ul>
 </li>
 </ul>
 <blockquote>
@@ -636,8 +620,7 @@ exists后（相关子查询）
 </blockquote>
 <h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><ul>
 <li><p>应用场景</p>
-<pre><code>当要显示的数据一页无法显示全部，需要分页提交sql请求
-</code></pre>
+<p>​    当要显示的数据一页无法显示全部，需要分页提交sql请求</p>
 </li>
 <li><p>语法</p>
 <p>执行顺序</p>
@@ -1128,7 +1111,7 @@ rollback;回滚事务
 <p>#2、创建视图emp_v2，要求查询部门的最高工资高于12000的部门信息<br>CREATE OR REPLACE VIEW emp_v2<br>AS<br>SELECT MAX(salary) mx_dep,department_id<br>FROM employees<br>GROUP BY department_id<br>HAVING MAX(salary) &gt; 12000;</p>
 <p>SELECT d.*,mx_dep<br>FROM departments d<br>JOIN emp_v2 e<br>ON e.department_id = d.department_id;</p>
 <p>#五、视图的更新<br>CREATE OR REPLACE VIEW myv1<br>AS<br>SELECT last_name,email<br>FROM employees;</p>
-<p>SELECT * FROM myv1;<br>SELECT * FROM employees;<br>#1.插入<br>INSERT INTO myv1 VALUES(‘张飞’,‘<a href="mailto:&#x7a;&#104;&#x61;&#110;&#x67;&#102;&#101;&#x69;&#x40;&#x71;&#x71;&#x2e;&#99;&#111;&#109;">&#x7a;&#104;&#x61;&#110;&#x67;&#102;&#101;&#x69;&#x40;&#x71;&#x71;&#x2e;&#99;&#111;&#109;</a>‘);<br>#2.修改<br>UPDATE myv1 SET last_name = ‘张无忌’ WHERE last_name = ‘张飞’;<br>#3.删除<br>DELETE FROM myv1 WHERE last_name = ‘张无忌’;</p>
+<p>SELECT * FROM myv1;<br>SELECT * FROM employees;<br>#1.插入<br>INSERT INTO myv1 VALUES(‘张飞’,‘<a href="mailto:&#122;&#x68;&#97;&#x6e;&#x67;&#x66;&#101;&#x69;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#122;&#x68;&#97;&#x6e;&#x67;&#x66;&#101;&#x69;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a>‘);<br>#2.修改<br>UPDATE myv1 SET last_name = ‘张无忌’ WHERE last_name = ‘张飞’;<br>#3.删除<br>DELETE FROM myv1 WHERE last_name = ‘张无忌’;</p>
 </blockquote>
 <h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>系统变量（由系统提供，属于服务器层面）</p>
 <pre><code>全局变量
