@@ -1110,7 +1110,7 @@ rollback;回滚事务
 <p>#2、创建视图emp_v2，要求查询部门的最高工资高于12000的部门信息<br>CREATE OR REPLACE VIEW emp_v2<br>AS<br>SELECT MAX(salary) mx_dep,department_id<br>FROM employees<br>GROUP BY department_id<br>HAVING MAX(salary) &gt; 12000;</p>
 <p>SELECT d.*,mx_dep<br>FROM departments d<br>JOIN emp_v2 e<br>ON e.department_id = d.department_id;</p>
 <p>#五、视图的更新<br>CREATE OR REPLACE VIEW myv1<br>AS<br>SELECT last_name,email<br>FROM employees;</p>
-<p>SELECT * FROM myv1;<br>SELECT * FROM employees;<br>#1.插入<br>INSERT INTO myv1 VALUES(‘张飞’,‘<a href="mailto:&#122;&#104;&#97;&#x6e;&#103;&#102;&#101;&#105;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#122;&#104;&#97;&#x6e;&#103;&#102;&#101;&#105;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a>‘);<br>#2.修改<br>UPDATE myv1 SET last_name = ‘张无忌’ WHERE last_name = ‘张飞’;<br>#3.删除<br>DELETE FROM myv1 WHERE last_name = ‘张无忌’;</p>
+<p>SELECT * FROM myv1;<br>SELECT * FROM employees;<br>#1.插入<br>INSERT INTO myv1 VALUES(‘张飞’,‘<a href="mailto:&#x7a;&#x68;&#x61;&#x6e;&#103;&#102;&#101;&#105;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">&#x7a;&#x68;&#x61;&#x6e;&#103;&#102;&#101;&#105;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;</a>‘);<br>#2.修改<br>UPDATE myv1 SET last_name = ‘张无忌’ WHERE last_name = ‘张飞’;<br>#3.删除<br>DELETE FROM myv1 WHERE last_name = ‘张无忌’;</p>
 </blockquote>
 <h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>系统变量（由系统提供，属于服务器层面）</p>
 <pre><code>全局变量
@@ -1409,6 +1409,15 @@ inout 既可以输入又可以输出，也就是既需要传入值，又可做�
   
 <nav id="article-nav">
   
+    <a href="/2022/02/21/PYTHON%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          PYTHON笔记
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/09/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hello World</div>
@@ -1496,7 +1505,7 @@ inout 既可以输入又可以输出，也就是既需要传入值，又可做�
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 mymodel57
+    		&copy; 2022 mymodel57
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
